@@ -1,0 +1,570 @@
+{% load static %}
+<!--main-->
+<main id="main-content">
+    <!--breadcrumb-->
+    <!-- НАВИГАЦИЯ -->
+    <nav aria-label="breadcrumb" class="breadcrumb--wrapper">
+        <div class="container">
+            <div class="row">
+                <ul class="breadcrumb col-12" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="/" title="Главная" itemprop="item"><span itemprop="name">Главная</span></a><meta itemprop="position" content="1" />
+                    </li>
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><meta itemprop="position" content="2" /><span itemprop="name">Готовая CRM для отеля</span></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- /НАВИГАЦИЯ -->
+    <!--/breadcrumb-->
+    <div class="page page-ppc page--bitrix24 crm">
+        <!-- ГЛАВНЫЙ ЭКРАН -->
+        <div class="ppc-slider">
+            <div class="ppc-slider-image slider-image-otel"></div>
+            <div class="container">
+                <div class="ppc-slider--wrapper row">
+                    
+                    <div class="ppc-slider--slides col-xl-4 offset-xl-1 col-lg-6 offset-lg-0 col-md-12 offset-md-0">
+                        
+                        <div class="slide slide-">
+                            <div class="slide-title">
+                                <h1>
+                                    {{ otel24page_BannerUp_title }}
+                                </h1>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Форма с главного экрана -->
+                    <div class="col-xl-6 offset-xl-1 col-lg-6 offset-lg-0 col-md-12 offset-md-0">
+                            <div>
+                                <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"859072",hash:"16a074a069eba8dd86dc1986c7708c22",locale:"ru"})}(window,0,"amo_forms_","params","load");</script><script id="amoforms_script_859072" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1636377622"></script>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /ГЛАВНЫЙ ЭКРАН -->
+        <!-- Вводная информация про CRM Отель -->
+        <div class="adwords-section adwords-section--bitrix24">
+            <div class="container">
+                <div class="adwords-section__wrapper row">
+                    <div class="adwords-section__image col-lg-6 col-md-12"><img src="{% static 'img/bitrix24/parts-1.png' %}" class="js-tilt-block" /></div>
+                    <div class="adwords-section__content col-lg-6 col-md-12">
+                        <img src="{% static 'img/bitrix24/bitrix24.png' %}" style="margin-bottom: 30px;" />
+                        <div class="adwords-section__text">
+                            <h4 class="section-heading bold-text">
+                                CRM для отеля в Битрикс24 позволяет<br />
+                                рассчитывать на:
+                            </h4>
+                            <ul class="red-marked-list">
+                                <li class="red-marked-list-item bold">Быстрый запуск готовой инфраструктуры. Возможностями Hotel24 можно воспользоваться прямо сейчас.</li>
+                                <li class="red-marked-list-item bold">Интеграцию с системами онлайн бронирования. Для интеграции своего сайта не понадобится помощь профессионалов. Все необходимое для этого есть в Hotel24.</li>
+                                <li class="red-marked-list-item bold">Прозрачность всех процессов. Работа сотрудников отеля фиксируется на всех этапах обслуживания.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Вводная информация про CRM Отель -->
+        <!-- Из чего состоит CRM Отель -->
+        <div class="info-section info-section--batch-implementation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12"><div class="title-base">Из чего состоит Hotel24</div></div>
+                </div>
+            </div>
+            <div class="container marbot90">
+                <div class="row">
+                    <div class="info-section__text col-lg-6 col-md-12">
+                        <h4 class="section-heading">Воронка продаж SMART</h4>
+                        <p>
+                            В Hotel24 обеспечивается не только логическое 
+                            движение постояльцев по всем этапам продаж, 
+                            но и беспроблемный доступ к информации 
+                            для всех сотрудников гостиницы.
+                        </p>
+                        <p>
+                            На последних трех этапах воронка содержит 
+                            информацию для 3х категорий персонала отеля – 
+                            руководителей, администраторов и клининговой службы.
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-6 col-md-12">
+                        <img src="{% static 'img/bitrix24/parts-2.png' %}" class="js-tilt-block" />
+                    </div>
+                </div>
+            </div>
+            <div class="container marbot90">
+                <div class="row">
+                    <div class="info-section__image col-lg-6 col-md-12">
+                        <img src="{% static 'img/bitrix24/parts-3.png' %}" class="js-tilt-block" />
+                    </div>
+                    <div class="info-section__text col-lg-6 col-md-12">
+                        <p>
+                            Руководители отеля смогут отслеживать точное число броней, 
+                            загруженность отеля и динамику движения постояльцев.
+                        </p>
+                        <p>
+                            Администраторам доступны данные о текущей загруженности отеля 
+                            и способах планирования количества постояльцев. 
+                            С помощью CRM для отеля в Битрикс24 администраторы 
+                            также могут планировать подходящее время обзвона клиентов 
+                            и других активностей.
+                        </p>
+                        <p>
+                            Клининговая служба всегда будет знать о количестве номеров, 
+                            которые следует убрать после освобождения.
+                        </p>
+                        <p>
+                            Все сотрудники отеля видят только одну воронку, 
+                            но при этом прекрасно знают свои задания на рабочий день.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container marbot90">
+                <div class="row">
+                    <div class="info-section__text col-lg-6 col-md-12">
+                        <h4 class="section-heading bold-text">Отраслевые поля</h4>
+                        <p>
+                            Карточки Hotel 24 – это идеальное сочетание 
+                            информативности и неперегруженности.
+                        </p>
+                        <p>
+                            Персоналу отеля не придется подробно заполнять карточки. 
+                            Следовательно, у сотрудников не возникнет чувства 
+                            внутреннего протеста к применению CRM.
+                        </p>
+                        <p>
+                            Сотрудникам отеля необходимо заполнить минимальное количество полей. 
+                            Пользователю нужно указать только свои номера и их стоимость. 
+                            Все остальное система выполнит автоматически.
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-6 col-md-12">
+                        <img src="{% static 'img/bitrix24/parts-4.png' %}" class="js-tilt-block" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Из чего состоит CRM Отель -->
+        <!-- Базовая автоматизация -->
+        <div class="info-section info-section--sites-creating-value" style="background: #f4f7fb; padding: 100px 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12"><div class="title-base">Базовая автоматизация</div></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row info-section-list__items">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="info-section-list-item">
+                            <div class="info-section-list-item__image icon-bg">
+                                <img class="dark" src="{% static 'img/bitrix24/icon-bg.png' %}" /><img class="filling" src="{% static 'img/bitrix24/notification.jpeg' %}" />
+                            </div>
+                            <div class="info-section-list-item__content">
+                                <div class="info-section-list-item__title text-center">Контроль исполнительности</div>
+                                <p class="text-center">Контролирует исполнительность и своевременность выполнения поставленных задач, отправляя сотрудникам уведомления о «просрочке».</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="info-section-list-item">
+                            <div class="info-section-list-item__image icon-bg">
+                                <img class="dark" src="{% static 'img/bitrix24/icon-bg.png' %}" /><img class="filling" src="{% static 'img/bitrix24/target.jpeg' %}" />
+                           </div>
+                            <div class="info-section-list-item__content">
+                                <div class="info-section-list-item__title text-center">Задачи для «дожатия»</div>
+                                <p class="text-center">Автоматически ставит задачи для «дожатия» потенциального клиента.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="info-section-list-item">
+                            <div class="info-section-list-item__image icon-bg">
+                                <img class="dark" src="{% static 'img/bitrix24/icon-bg.png' %}" /><img class="filling" src="{% static 'img/bitrix24/voronka.jpeg' %}" />
+                            </div>
+                            <div class="info-section-list-item__content">
+                                <div class="info-section-list-item__title text-center">Стадии воронки</div>
+                                <p class="text-center">Автоматически меняет стадии воронки продаж до приезда и после отъезда постояльца.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="info-section-list-item">
+                            <div class="info-section-list-item__image icon-bg">
+                                <img class="dark" src="{% static 'img/bitrix24/icon-bg.png' %}" /><img class="filling" src="{% static 'img/bitrix24/followers-1.jpeg' %}" />
+                            </div>
+                            <div class="info-section-list-item__content">
+                                <div class="info-section-list-item__title text-center">Задачи по заселению и выселению</div>
+                                <p class="text-center">Автоматически формирует задачи по заселению и выселению постояльцев, а также обеспечивает обратную связь с ними.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Базовая автоматизация -->
+        <!-- Этапы воронки продаж -->
+        <!-- Этап 1 -->
+        <div class="info-section info-section--batch-implementation steps">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12"><div class="title-base">Этапы воронки продаж</div></div>
+                </div>
+            </div>
+            <div class="container marbot90">
+                <div class="row">
+                    <div class="info-section__text col-sm-12 col-md-5">
+                        <h4 class="section-heading">Этап 1. Новая заявка, обработать</h4>
+                        <p>
+                            На данном этапе от потенциального постояльца нужно получить максимум информации 
+                            о дате приезда, сроках пребывании и количестве гостей.
+                        </p>
+                        <p>
+                            Также необходимо подготовить предложение и заполнить карточку постояльца. 
+                            Оператор имеет 3 часа на выполнение перечисленных задач. 
+                            После этого уведомление получит руководитель, который и возьмет
+                            карточку гостя под свой контроль.
+                        </p>
+                        <h4 class="section-heading">Базовая автоматизация этапа:</h4>
+                        <ul class="red-marked-list">
+                            <li class="red-marked-list-item bold">
+                                Система автоматически уведомляет о появлении нового обращения 
+                                и напоминает о том, что его необходимо обработать в течение 3-х часов.
+                            </li>
+                            <li class="red-marked-list-item bold">
+                                Если новая сделка не была обработана за 3 часа, руководителю поступает уведомление 
+                                о необходимости взять ее под контроль.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-section__image col-sm-12 col-md-7"><img src="{% static 'img/bitrix24/first-step.png' %}" class="js-tilt-block" /></div>
+                </div>
+            </div>
+        </div>
+        <!-- /Этап 1 -->
+        <!-- Этап 2 -->
+        <div class="info-section info-section--bitrix24-price steps">
+            <div class="container">
+                <div class="row">
+                    <div class="info-section__image col-sm-12 col-md-7"><img src="{% static 'img/bitrix24/second-step.png' %}" class="js-tilt-block" /></div>
+                    <div class="info-section__text col-sm-12 col-md-5">
+                        <h4 class="section-heading">Этап 2. Обработали, нужно дожать</h4>
+                        <p>
+                            Обычно потенциальные клиенты берут паузу на раздумья. 
+                            Поэтому за 3 дня до запланированной даты приезда оператор должен выйти на связь с клиентом и уточнить его решение.
+                        </p>
+                        <p>
+                            Для этого в системе формируется автоматическая задача на ответственного менеджера. 
+                            При этом сроки постановки задачи могут быть изменены.
+                        </p>
+                        <h4 class="section-heading">Базовая автоматизация этапа:</h4>
+                        <ul class="red-marked-list">
+                            <li class="red-marked-list-item bold">
+                                За три дня до даты потенциального бронирования, то есть до даты, 
+                                когда клиент планировал заселиться, ответственному сотруднику 
+                                автоматически будет поставлена задача связаться с клиентом и узнать о его
+                                решении.
+                            </li>
+                            <li class="red-marked-list-item bold">
+                                Менеджер должен убедить клиента забронировать номер именно у нас 
+                                или собрать как можно больше информации о том, какой отель он выбрал и почему.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Этап 2 -->
+        <!-- Этап 3 -->
+        <div class="info-section info-section--batch-implementation steps">
+            <div class="container marbot90">
+                <div class="row">
+                    <div class="info-section__text col-sm-12 col-md-5">
+                        <h4 class="section-heading">Этап 3. Забронировали, ждём</h4>
+                        <p>
+                            Гость согласился на бронирование и даже отправил предоплату, 
+                            теперь необходимо дождаться даты его приезда. 
+                            В дату прибытия Карточка гостя будет переведена системой на следующий этап автоматически.
+                        </p>
+                        <h4 class="section-heading">Базовая автоматизация этапа:</h4>
+                        <ul class="red-marked-list">
+                            <li class="red-marked-list-item bold">
+                                В день приезда клиента карточка автоматически меняет стадию 
+                                на "Сегодня оформляем гостя" без участия пользователя.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-section__image col-sm-12 col-md-7"><img src="{% static 'img/bitrix24/third-step.png' %}" class="js-tilt-block" /></div>
+                </div>
+            </div>
+        </div>
+        <!-- /Этап 3 -->
+        <!-- Этап 4 -->
+        <div class="info-section info-section--bitrix24-price steps">
+            <div class="container">
+                <div class="row">
+                    <div class="info-section__image col-sm-12 col-md-7"><img src="{% static 'img/bitrix24/forth-step.png' %}" class="js-tilt-block" /></div>
+                    <div class="info-section__text col-sm-12 col-md-5">
+                        <h4 class="section-heading">Этап 4. Сегодня оформляем гостя</h4>
+                        <p>
+                            Количество карточек на данном этапе воронки соответствует числу гостей, 
+                            которые сегодня приедут в отель. Остается только лишь проверить все ли готово к приезду постояльцев. 
+                            В CRM отеля Битрикс24 вся необходимая информация хранится в одном месте.
+                        </p>
+                        <h4 class="section-heading">Базовая автоматизация этапа:</h4>
+                        <ul class="red-marked-list">
+                            <li class="red-marked-list-item bold">
+                                В день приезда ответственному менеджеру приходит уведомление о том, 
+                                кто сегодня приезжает. Система просит ответственного еще раз убедиться в том, 
+                                что все готово к приезду гостя и что все его
+                                желания из поля "Комментарий" будут удовлетворены.
+                            </li>
+                            <li class="red-marked-list-item bold">
+                                Все важные напоминания, которые не нашли отражения в карточке 
+                                мы рекомендуем оставлять именно здесь и проверять в день приезда.
+                            </li>
+                            <li class="red-marked-list-item bold">
+                                Ответственному ставится задача заселить гостя
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Этап 4 -->
+        <!-- Этап 5 -->
+        <div class="info-section info-section--batch-implementation steps">
+            <div class="container marbot90">
+                <div class="row">
+                    <div class="info-section__text col-sm-12 col-md-5">
+                        <h4 class="section-heading">Этап 5. Гость прибыл, проживание</h4>
+                        <p>
+                            После прибытия и заселения постояльца можно узнать 
+                            точное количество гостей, проживающих в отеле на данный момент.
+                        </p>
+                        <p>
+                            Для более эффективного анализа результатов возможна настройка аналитических отчетов.
+                        </p>
+                    </p>
+                    </div>
+                    <div class="info-section__image col-sm-12 col-md-7"><img src="{% static 'img/bitrix24/fifth-step.png' %}" class="js-tilt-block" /></div>
+                </div>
+            </div>
+        </div>
+        <!-- /Этап 5 -->
+        <!-- Этап 6 -->
+        <div class="info-section info-section--bitrix24-price steps">
+            <div class="container">
+                <div class="row">
+                    <div class="info-section__image col-sm-12 col-md-7"><img src="{% static 'img/bitrix24/sixth-step.png' %}" class="js-tilt-block" /></div>
+                    <div class="info-section__text col-sm-12 col-md-5">
+                        <h4 class="section-heading">Этап 6. Гость выезжает, клининг</h4>
+                        <p>
+                            После того, как гость покинул свой номер, его апартаменты должны быть убраны
+                        </p>
+                        <h4 class="section-heading">Базовая автоматизация этапа:</h4>
+                        <ul class="red-marked-list">
+                            <li class="red-marked-list-item bold">
+                                В день отъезда карточка клиента автоматически перемещается в стадию "Гость выезжает, клининг". 
+                                Ваш администратор всегда будет знать сколько человек покинет отель, а мастер клининга сколько номеров
+                                будут нуждаться в его внимании.
+                            </li>
+                            <li class="red-marked-list-item bold">
+                                Ответственному ставится задача выселить гостя
+                            </li>
+                        </ul>
+                        <p>
+                            После завершения уборки карточка постояльца должна быть перемещена в успешную стадию(Сделка закрыта). 
+                            Благодаря этому, номер будет снова доступен для заселения гостей.
+                        </p>
+                        <p>
+                            Необходимо получать обратную связь от гостей и свежие отзывы. 
+                            Поэтому ответственному по сделке будет автоматически поставлена такая задача. Для ее выполнения есть два дня.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Этап 6 -->
+        <!-- /Этапы воронки продаж -->
+        <!-- Тарифы и опции -->
+        <div class="bitrix24-rates-sections">
+            <div class="bitrix24-rates-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 section-heading">
+                            <div class="title-base">Тарифы и опции</div>
+                            <p class="text-center text-white">
+                                В CRM Битрикс24 предусмотрено 3 тарифа, которые<br />
+                                позволят использовать готовое решение Hotel24:
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!-- Тариф Бесплатный -->
+                        <div class="col-xl-4 col-lg-6 site-price__wrapper fee">
+                            {% for rate in setupRateOne_list %}
+                            <div class="site-price">
+                                <div class="site-price__header">{{ rate.setupRateTitle }}</div>
+                                <div class="site-price__content">
+                                    <div class="site-price__description">
+                                        <ul class="red-marked-list">
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText1 }}
+                                            </li>
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText2 }}
+                                            </li>
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText3 }}
+                                            </li>
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText4 }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="site-price__info">
+                                        <div class="row">
+                                            <div class="site-price__info-item f-col col-xl-8 col-lg-2">
+                                                <p class="font-bold font16 lh-norm">
+                                                    Стоимость: <br><br> от {{ rate.setupRatePrice }} ₽
+                                                </p>
+                                                
+                                                <p class="font16 lh-norm">
+                                                    Срок выполнения: <br><br> от {{ rate.setupRateDays }} рабочих дней
+                                                </p> 
+                                            </div>
+                                            <div class="site-price__action">
+                                                <button class="btn">
+                                                    <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwxxdm'>Заказать</a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!-- /Тариф Бесплатный -->
+                        <!-- Тариф Базовый -->
+                        <div class="col-xl-4 col-lg-6 site-price__wrapper fee">
+                            {% for rate in setupRateTwo_list %}
+                            <div class="site-price">
+                                <div class="site-price__header">{{ rate.setupRateTitle }}</div>
+                                <div class="site-price__content">
+                                    <div class="site-price__description">
+                                        <ul class="red-marked-list">
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText1 }}
+                                            </li>
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText2 }}
+                                            </li>
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText3 }}
+                                            </li>
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText4 }}
+                                            </li>
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText5 }}
+                                            </li>
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText6 }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="site-price__info">
+                                        <div class="row">
+                                            <div class="site-price__info-item f-col col-xl-8 col-lg-2">
+                                                <p class="font-bold font16 lh-norm">
+                                                    Стоимость: <br><br> от {{ rate.setupRatePrice }} ₽
+                                                </p>
+                                                
+                                                <p class="font16 lh-norm">
+                                                    Срок выполнения: <br><br> от {{ rate.setupRateDays }} рабочих дней
+                                                </p> 
+                                            </div>
+                                            <div class="site-price__action">
+                                                <button class="btn">
+                                                    <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwxxdm'>Заказать</a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!-- /Тариф Базовый -->
+                        <!-- Тариф Стандартный -->
+                        <div class="col-xl-4 col-lg-6 site-price__wrapper fee">
+                            {% for rate in setupRateThree_list %}
+                            <div class="site-price">
+                                <div class="site-price__header">{{ rate.setupRateTitle }}</div>
+                                <div class="site-price__content">
+                                    <div class="site-price__description">
+                                        <ul class="red-marked-list">
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText1 }}
+                                            </li>
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText2 }}
+                                            </li>
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText3 }}
+                                            </li>
+                                            <li class="red-marked-list-item">
+                                                {{ rate.setupRateText4 }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="site-price__info">
+                                        <div class="row">
+                                            <div class="site-price__info-item f-col col-xl-8 col-lg-2">
+                                                <p class="font-bold font16 lh-norm">
+                                                    Стоимость: <br><br> от {{ rate.setupRatePrice }} ₽
+                                                </p>
+                                                
+                                                <p class="font16 lh-norm">
+                                                    Срок выполнения: <br><br> от {{ rate.setupRateDays }} рабочих дней
+                                                </p> 
+                                            </div>
+                                            <div class="site-price__action">
+                                                <button class="btn">
+                                                    <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwxxdm'>Заказать</a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!-- /Тариф Стандартный -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Тарифы и опции -->
+        <!--ФОРМА ОСТАЛИСЬ ВОПРОСЫ?-->
+        <div class="section--lapkin-form lapkin-form">
+            <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"857188",hash:"9c87c4cae09b16f0d24f64064c65b686",locale:"ru"})}(window,0,"amo_forms_","params","load");</script><script id="amoforms_script_857188" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1635943970"></script>
+
+            <div class="container">
+                <div class="row">
+                    <div class="lapkin-form--wrapper col-xl-10 offset-xl-1 col-sm-12 offset-sm-0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Форма - Остались вопросы? Напишите нам! -->
+    </div>
+</main>
+<!--/main-->

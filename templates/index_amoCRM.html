@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    {% for title in seoData %}{{ title.pageTitle }}{% endfor %}
+{% endblock %}
+
+{% block description %} 
+    {% for title in seoData %}{{ title.pageDescription }}{% endfor %} 
+{% endblock %}
+
+{% block content %}
+    <!-- Main -->
+    {% include 'amoCRM.html' %}
+
+{% endblock %}

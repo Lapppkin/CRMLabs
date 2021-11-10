@@ -1,0 +1,1055 @@
+{% load static %}
+<!--main--> 
+<main id="main-content">
+    <!--breadcrumb-->
+    <!-- НАВИГАЦИЯ -->
+    <nav aria-label="breadcrumb" class="breadcrumb--wrapper">
+        <div class="container">
+            <div class="row">
+                <ul class="breadcrumb col-12" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="/" title="Главная" itemprop="item"><span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="2"><span itemprop="name">Внедрение и настройка CRM Битрикс24 | Автоматизация бизнес-процессов</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/breadcrumb--> 
+    <div class="page page-ppc page--bitrix24">
+        <!-- ГЛАВНЫЙ ЭКРАН -->
+        <div class="ppc-slider">
+            <div class="ppc-slider-image slider-image-b24"></div>
+            <div class="container">
+                <div class="ppc-slider--wrapper row">
+                    <div class="ppc-slider--slides col-xl-5 offset-xl-1 col-lg-7 offset-lg-0 col-md-12 offset-md-0">
+                        <div class="slide slide-">
+                            {% for slide in Bitrix24page_BannerUp_slider %}
+                            <div class="slide-title">
+                                <h1> {{ slide.bannerUpTitle }} </h1>
+                            </div>
+                            <div class="slide-title__text"> {{ slide.bannerUpText }} </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-xl-6 offset-xl-0 col-lg-5 offset-lg-0 col-md-12 offset-md-0">
+                        <div><script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"859003",hash:"8234bedd7af4e9b03c08481e22094546",locale:"ru"})}(window,0,"amo_forms_","params","load");</script><script id="amoforms_script_859003" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1636372162"></script></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- О КОМПАНИИ -->
+        <div class="adwords-section adwords-section--bitrix24">
+            <div class="container">
+                <div class="adwords-section__wrapper row">
+                    <div class="adwords-section__image col-lg-6 col-md-12">
+                        <img src="{% static 'img/bitrix24/first.png' %}" class="js-tilt-block">
+                    </div>
+                    <div class="adwords-section__content col-lg-6 col-md-12">
+                        <img src="{% static 'img/bitrix24/bitrix24-logo.png' %}" style="margin-bottom: 10px; margin-left: -10px;">
+                        <div class="adwords-section__text">Компания CRMLabs оказывает услуги пакетного внедрения системы Битрикс24. Наши специалисты занимаются интеграцией, индивидуальной настройкой, обучением и технической поддержкой сервиса Битрикс24.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ПАКЕТНАЯ НАСТРОЙКА Б24 -->
+        <div class="info-section info-section--batch-implementation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-base"> Пакетная настройка Битрикс24 </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="info-section__text col-lg-6 col-md-12">
+                        <p> Компания «1С-Битрикс» является разработчиком и провайдером сервиса для обеспечения эффективного управления бизнесом Битрикс24. Однако эта компания не оказывает услуги по интеграции и техническому сопровождению данного сервиса. В этом направлении работают сертифицированные партнеры «1С-Битрикс».
+                        </p>
+                        <p> Одним из таких партнеров является CRMLabs. Наши опытные интеграторы выполнят все необходимые работы по настройке CRM Битрикс24 и увеличению эффективности функционирования этого сервиса.
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-6 col-md-12">
+                        <img src="{% static 'img/bitrix24/two.png' %}" class="js-tilt-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- СТОИМОСТЬ ВНЕДРЕНИЯ -->
+        <div class="info-section info-section--bitrix24-price">
+            <div class="container">
+                <div class="row">
+                        <div class="col-12">
+                            <div class="title-base"> Стоимость внедрения </div>
+                        </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="info-section__image col-lg-6 col-md-12">
+                        <img src="{% static 'img/bitrix24/price.png' %}" class="js-tilt-block">
+                    </div>
+                    <div class="info-section__text col-lg-6 col-md-12">
+                        <p> Цена внедрения Битрикс24 зависит от технического задания заказчика и количества сотрудников в вашей компании. Как показывает наша практика, средняя цена интеграции системы в расчете на одного сотрудника равна 2 000 рублей.
+                        </p>
+                        <button class="btn">
+                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwxllt'> Узнать стоимость для вашего проекта
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- КАЛЬКУЛЯТОР -->
+        <div class="bitrix24-rates-sections">
+            <section class="calculator bitrix24-rates-section">
+                <div class="container">
+                    <h2 class="title-base">Калькулятор стоимости внедрения CRM системы Битрикс24</h2>
+                    <div class="text">
+                        <p class="bitrix24-rates-section__sub-title">
+                            Ежедневно помогаем нашим клиентам с решением любых вопросов по Битрикс24!
+                        </p>
+                    </div>
+                    <div class="menu">
+                        <button type="button" class="btn btn-success tariff active" data-id="start">
+                            <i class="fa fa-plus-circle"></i>
+                            <span>Пакет "Старт" 19 900 руб.</span>
+                        </button>
+                        <button type="button" class="btn btn-success tariff" data-id="automation">
+                            <i class="fa fa-plus-circle"></i>
+                            <span>Пакет "Автоматизация" 39 900 руб.</span>
+                        </button>
+                        <button type="button" class="btn btn-success tariff" data-id="maximum">
+                            <i class="fa fa-plus-circle"></i>
+                            <span>Пакет "Максимум" от 59 900 руб.</span>
+                        </button>
+                    </div>
+                    <form action="" class="js-calc-form">
+                        <div class="table-responsive b24-rate-table">
+                            <!-- Раздел - ОБЩИЕ НАСТРОЙКИ -->
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr class="b24-rate-table__full">
+                                        <td colspan="4" class="text-center "> Общие настройки </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="1" data-id="1" data-price="500" checked>
+                                        </td>
+                                        <td colspan="2"> Подбор тарифа и регистрация облачного портала Битрикс24 </td>
+                                        <td class="text-right"> 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="2" data-id="2" data-price="1000" checked>
+                                        </td>
+                                        <td colspan="2"> Приглашение сотрудников в CRM </td>
+                                        <td class="text-right"> 1 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="3" data-id="3" data-price="1500" checked>
+                                        </td>
+                                        <td colspan="2"> Создание структуры отдела продаж </td>
+                                        <td class="text-right"> 1 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="4" data-id="4" data-price="500" checked>
+                                        </td>
+                                        <td> Установка десктопного приложения </td>
+                                        <td>
+                                            <span>3 устройства</span> десктоп ноутбук *
+                                        </td>
+                                        <td class="text-right"> 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="5" data-id="5" data-price="500" checked>
+                                        </td>
+                                        <td> Установка мобильного приложения </td>
+                                        <td><span>3 устройства</span> iOS/Android *</td>
+                                        <td class="text-right"> 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="6" data-id="6" data-price="1000" checked>
+                                        </td>
+                                        <td colspan="2"> Оптимизация карточки лида, контакта, сделки </td>
+                                        <td class="text-right"> 1 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="7" data-id="7" data-price="1500" checked>
+                                        </td>
+                                        <td colspan="2"> Настройка типовых фильтров лидов, сделок, дел </td>
+                                        <td class="text-right"> 1 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="8" data-id="8" data-price="1500" checked>
+                                        </td>
+                                        <td colspan="2"> Настройка стадий лидов и сделок </td>
+                                        <td class="text-right"> 1 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="9" data-id="9" data-price="1000">
+                                        </td>
+                                        <td colspan="2"> Создание 2-го направления сделок (другие этапы воронки для другого направления бизнеса)</td>
+                                        <td class="text-right"> 1 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="10" data-id="10" data-price="1500">
+                                        </td>
+                                        <td colspan="2"> Настройка стадий лидов и сделок для второго направления </td>
+                                        <td class="text-right"> 1 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="11" data-id="11" data-price="1500">
+                                        </td>
+                                        <td> Настройка прав доступа к CRM </td>
+                                        <td>
+                                            <span>до 3 ролей</span>
+                                        </td>
+                                        <td class="text-right"> 1 500 руб. </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- /Раздел - ОБЩИЕ НАСТРОЙКИ -->
+                            <!-- Раздел - Контроль входящих заявок и общения с клиентами -->
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr class="b24-rate-table__full">
+                                        <td colspan="4" class="text-center"> Контроль входящих заявок и общения с клиентами </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="12" data-id="12" data-price="2900" checked>
+                                        </td>
+                                        <td> Подключение телефонии для входящих звонков </td>
+                                        <td><span>Штатная или внешняя SIP телефония*</span></td>
+                                        <td class="text-right"> 2 900 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="13" data-id="13" data-price="500" checked>
+                                        </td>
+                                        <td colspan="2"> Настройка номера для исходящих звонков </td>
+                                        <td class="text-right"> 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="14" data-id="14" data-price="500" checked>
+                                        </td>
+                                        <td colspan="2"> Настройка записи телефонных разговоров </td>
+                                        <td class="text-right"> 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="15" data-id="15" data-price="500" checked>
+                                        </td>
+                                        <td colspan="2"> Подключение к CRM общего корпоративного электронного адреса</td>
+                                        <td class="text-right"> 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="16" data-id="16" data-price="2300" checked>
+                                        </td>
+                                        <td colspan="2"> Подключение к CRM электронных адресов менеджеров </td>
+                                        <td class="text-right"> 2 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="17" data-id="17" data-price="900" checked>
+                                        </td>
+                                        <td> Подключение сервиса обратный звонок для одного сайта </td>
+                                        <td><span>Установка виджета</span> или код для размещения на сайте*</td>
+                                        <td class="text-right"> 900 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="18" data-id="18" data-price="2800" checked>
+                                        </td>
+                                        <td colspan="2"> Практикум по обработке и конвертации лидов, ведению сделок по стадиям для пользователей CRM</td>
+                                        <td class="text-right"> 2 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="19" data-id="19" data-price="1500" checked>
+                                        </td>
+                                        <td colspan="2"> Настройка экранов отчета в категориях Лиды и Сделки </td>
+                                        <td class="text-right"> 1 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="20" data-id="20" data-price="1500" checked>
+                                        </td>
+                                        <td colspan="2"> Настройка стадий лидов и сделок </td>
+                                        <td class="text-right"> 1 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="21" data-id="21" data-price="500">
+                                        </td>
+                                        <td colspan="2"> Настройка CRM-формы (заявки с сайта). Без подключения систем оплаты и настройки условий</td>
+                                        <td class="text-right"> 500 руб.</td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="22" data-id="22" data-price="1000">
+                                        </td>
+                                        <td> Подключение соцсетей и мессенджеров (открытая линия) </td>
+                                        <td><span>ВК, FB, Whatsapp, Telegram, Instagram*</span></td>
+                                        <td class="text-right"> 1 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="23" data-id="23" data-price="2500">
+                                        </td>
+                                        <td colspan="2"> Практикум по обработке и конвертации лидов, ведению сделок по стадиям из подключенных каналов </td>
+                                        <td class="text-right"> 2 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td> 
+                                            <input class="price-item" type="checkbox" value="24" data-id="24" data-price="1000">
+                                        </td>
+                                        <td colspan="2"> Настройка робота контроля лида/сделки (уведомление о просроченной стадии)</td>
+                                        <td class="text-right"> 1 000 руб. </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- /Раздел - Контроль входящих заявок и общения с клиентами -->
+                            <!-- Раздел - Повторные продажи, автоматизация -->
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr class="b24-rate-table__full">
+                                        <td colspan="4" class="text-center"> Повторные продажи, автоматизация </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="25" data-id="25" data-price="1900">
+                                        </td>
+                                        <td colspan="2"> Регулярный контакт. Автопланирование следующего контакта. Настройка робота</td>
+                                        <td class="text-right"> 1 900 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="26" data-id="26" data-price="1900">
+                                        </td>
+                                        <td colspan="2"> Повторные продажи. Автозадание на повторную продажу менеджеру. Настройка робота </td>
+                                        <td class="text-right"> 1 900 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="27" data-id="27" data-price="1900">
+                                        </td>
+                                        <td colspan="2"> Кросс-продажи. Автозадание на продажу смежного продукта/услуги. Настройка робота</td>
+                                        <td class="text-right"> 1 900 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="28" data-id="28" data-price="1900">
+                                        </td>
+                                        <td colspan="2"> Автоматическое подключение ретаргетинга для соц.сетей по лидам и сделкам в одной из стадий </td>
+                                        <td class="text-right"> 1 900 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="29" data-id="29" data-price="1900">
+                                        </td>
+                                        <td colspan="2"> Настройка 2 отчетов CRM в конструкторе отчетов </td>
+                                        <td class="text-right"> 1 900 руб. </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- /Раздел - Повторные продажи, автоматизация -->
+                            <!-- Раздел - Продвинутые функции -->
+                            <table class="table table-hover">
+                                <thead>
+                                <tr class="b24-rate-table__full">
+                                    <td colspan="4" class="text-center"> Продвинутые функции </td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="30" data-id="30" data-price="6000">
+                                        </td>
+                                        <td colspan="2"> Настройка интеграции с 1С </td>
+                                        <td class="text-right"> от 6 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="31" data-id="31" data-price="10000"> </td>
+                                        <td> Разработка приложений </td>
+                                        <td> <span>Для коробочных и облачных версий*</span> </td>
+                                        <td class="text-right"> от 10 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="32" data-id="32" data-price="11500"> </td>
+                                        <td> Создание сайта в <a href="/sites/" class="link">конструкторе Сайты24</a></td>
+                                        <td> <span>Персональные блоки*</span> </td>
+                                        <td class="text-right"> от 11 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="33" data-id="33" data-price="30000">
+                                        </td>
+                                        <td colspan="2"> Создание интернет-магазина в конструкторе Сайты24</td>
+                                        <td class="text-right"> от 30 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="34" data-id="34" data-price="3000">
+                                        </td>
+                                        <td colspan="2"> Настройка Email и SMS рассылок по клиентам </td>
+                                        <td class="text-right"> от 3 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="35" data-id="35" data-price="3000">
+                                        </td>
+                                        <td colspan="2"> Настройка автоматических обзвонов </td>
+                                        <td class="text-right"> от 3 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="36" data-id="36" data-price="1000">
+                                        </td>
+                                        <td colspan="2"> Создание бизнес-процессов </td>
+                                        <td class="text-right"> от 1 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="37" data-id="37" data-price="5000">
+                                        </td>
+                                        <td colspan="2"> Сбор и обработка данных по рекламным кампаниям в CRM </td>
+                                        <td class="text-right"> 5 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="38" data-id="38" data-price="1000">
+                                        </td>
+                                        <td colspan="2"> Настройка входящих и исходящих вебхуков </td>
+                                        <td class="text-right"> 1 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="39" data-id="39" data-price="2500">
+                                        </td>
+                                        <td colspan="2"> Обучение и поддержка пользователей </td>
+                                        <td class="text-right"> 2 500 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="40" data-id="40" data-price="5000">
+                                        </td>
+                                        <td colspan="2"> Подключение ATC на базе Asterisk к Битрикс24 </td>
+                                        <td class="text-right"> от 5 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="41" data-id="41" data-price="25000">
+                                        </td>
+                                        <td colspan="2"> Сквозная аналитика. Анализ кампаний и настройка модуля. <span class="text-success">Новинка!</span></td>
+                                        <td class="text-right"> от 25 000 руб. </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>
+                                            <input class="price-item" type="checkbox" value="41" data-id="41" data-price="25000"> 
+                                        </td>
+                                        <td colspan="2">
+                                            <a href="/crm-dlya-oteley/">Hotel24 - Настройка CRM для Отелей</a>.
+                                            <span class="text-success">Новинка!</span>
+                                        </td>
+                                        <td class="text-right"> от 25 000 руб. </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- /Раздел - Продвинутые функции -->
+                            <!-- Раздел - Сумма итого -->
+                            <table class="table total">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="price bitrix24-rates-section__price">
+                                                <span>19900</span> руб.
+                                            </div>
+                                            <!--<a href="#webform" class="btn btn-success btn-order" data-toggle="modal" data-target="#webform">Заказать настройку</a>-->
+                                            <button class="btn">
+                                                <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwxlrw'>Заказать внедрение</a>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- /Раздел - Сумма итого -->
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <!-- КОНТЕНТ ПРО ЭТАПЫ ВНЕДРЕНИЯ И ТАК ДАЛЕЕ -->
+        <div class="info-section info-section--bitrix24-stages">
+        <div class="container">
+            <div class="info-section-list__header row">
+            <div class="col-12">
+                <div class="title-base">
+                Этапы интеграции
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="info-section-list__description"> Интеграция Битрикс24 состоит из двух основных этапов: настройки и автоматизации системы.
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+            <div class="info-section__text col-lg-6 col-md-12">
+                <strong> Настройка системы </strong>
+                <p> На первом этапе осуществляется настройка CRM, подключение телефонии, Емейлов и сервиса обратного звонка. Наши специалисты проведут инструктаж сотрудников и научат пользоваться всем функционалом Битрикс24.
+                </p>
+                <p> Базовая настройка всегда начинается с регистрации нового аккаунта в Битрикс24. Далее мы приглашаем сотрудников CRM и создаем различные структуры компании.
+                </p>
+                <p> На следующем этапе оптимизируются карточки лида и контактов. После этого наши специалисты настраивают типовые фильтры, а также стадии лидов и сделок. Базовая настройка предусматривает подключение телефонного номера с функцией записи разговоров. Так же подключаются индивидуальные и общий корпоративный Емейл.
+                </p>
+                <p> После завершения всех необходимых работ специалисты CRMLabs проведут практикум для ваших сотрудников.
+                </p>
+            </div>
+            <div class="info-section__image col-lg-6 col-md-12">
+                <img src="{% static 'img/bitrix24/stages-big-1.png' %}" class="js-tilt-block">
+            </div>
+            </div>
+            <div class="row info-section__item-not-first">
+            <div class="info-section__image col-lg-6 col-md-12">
+                <img src="{% static 'img/bitrix24/stages-big-2.png' %}" class="js-tilt-block">
+            </div>
+            <div class="info-section__text col-lg-6 col-md-12"> <strong> Автоматизация системы </strong>
+                <p> На втором этапе выполняется интеграция и автоматизация сервиса. Наши специалисты подключат все необходимые коммуникационные каналы, настроят сервис повторных продаж и автоматизируют процедуру планирования. В обязанности интегратора Битрикс24 также входит:
+                </p>
+            </div>
+            </div>
+            <div class="row info-section-list__items">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="info-section-list-item">
+                <div class="info-section-list-item__image">
+                    <img src="{% static 'img/bitrix24/stages-1.png' %}">
+                </div>
+                <div class="info-section-list-item__content">
+                    <div class="info-section-list-item__title"> Настройка форм для заполнения потенциальным клиентом
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="info-section-list-item">
+                <div class="info-section-list-item__image">
+                    <img src="{% static 'img/bitrix24/stages-2.png' %}">
+                </div>
+                <div class="info-section-list-item__content">
+                    <div class="info-section-list-item__title"> Подключение социальных сетей </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="info-section-list-item">
+                <div class="info-section-list-item__image">
+                    <img src="{% static 'img/bitrix24/stages-3.png' %}">
+                </div>
+                <div class="info-section-list-item__content">
+                    <div class="info-section-list-item__title"> Добавление новых контактов </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="info-section-list-item">
+                <div class="info-section-list-item__image">
+                    <img src="{% static 'img/bitrix24/stages-4.png' %}">
+                </div>
+                <div class="info-section-list-item__content">
+                    <div class="info-section-list-item__title"> Настройка системы контроля лидов, автоматизация постановки задач и уведомлений
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="info-section-list-item">
+                <div class="info-section-list-item__image">
+                    <img src="{% static 'img/bitrix24/stages-5.png' %}">
+                </div>
+                <div class="info-section-list-item__content">
+                    <div class="info-section-list-item__title"> Автоматизация процедуры создания новых сделок
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="info-section-list-item">
+                <div class="info-section-list-item__image">
+                    <img src="{% static 'img/bitrix24/stages-6.png' %}">
+                </div>
+                <div class="info-section-list-item__content">
+                    <div class="info-section-list-item__title"> Настройка отчетов в соответствии с техническим заданием
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="info-section-list-item">
+                <div class="info-section-list-item__image">
+                    <img src="{% static 'img/bitrix24/stages-7.png' %}">
+                </div>
+                <div class="info-section-list-item__content">
+                    <div class="info-section-list-item__title"> Демонстрация работы </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="info-section-list-item">
+                <div class="info-section-list-item__image">
+                    <img src="{% static 'img/bitrix24/stages-8.png' %}">
+                </div>
+                <div class="info-section-list-item__content">
+                    <div class="info-section-list-item__title"> Практикум для сотрудников </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- ПРЕЗЕНТАЦИИ -->
+        <div class="info-section info-section--bitrix24-presentations">
+        <div class="container">
+            <div class="row">
+            <div class="col-12">
+                <div class="title-base"> Презентации </div>
+            </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row info-section-list__items">
+            <div class="col-md-6 col-sm-12">
+                <div class="bitrix24-presentation">
+                <div class="bitrix24-presentation__image">
+                    <img src="{% static 'img/bitrix24/presentations-1.png' %}">
+                </div>
+                <div class="bitrix24-presentation__content">
+                    <noindex>
+                    <a href="https://www.bitrix24.ru/features/?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__name"> CRM для продаж - Битрикс24.
+                    </a>
+                    </noindex>
+                    <div class="bitrix24-presentation__description"> CRM помогает продавать больше: берет под контроль все каналы коммуникаций с клиентами, подсказывает, что делать и автоматизирует продажи.
+                    </div>
+                    <noindex>
+                    <a href="https://www.bitrix24.ru/features/?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__more">
+                        <span class="bitrix24-presentation__more-text">Подробнее</span>
+                        <span class="bitrix24-presentation__more-circle">
+                        <img src="{% static 'img/bitrix24/arrow.svg' %}">
+                        </span>
+                    </a>
+                    </noindex>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="bitrix24-presentation">
+                <div class="bitrix24-presentation__image">
+                    <img src="{% static 'img/bitrix24/presentations-2.png' %}">
+                </div>
+                <div class="bitrix24-presentation__content">
+                    <noindex>
+                    <a href="https://www.bitrix24.ru/features/tasks.php?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__name"> Задачи и проекты - Битрикс24. </a>
+                    </noindex>
+                    <div class="bitrix24-presentation__description"> Задачи и проекты помогают работать вместе и успевать вовремя. Если задача поставлена в Битрикс24, она будет выполнена.
+                    </div>
+                    <noindex>
+                    <a href="https://www.bitrix24.ru/features/tasks.php?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__more">
+                        <span class="bitrix24-presentation__more-text">Подробнее</span>
+                        <span class="bitrix24-presentation__more-circle">
+                        <img src="{% static 'img/bitrix24/arrow.svg' %}">
+                        </span>
+                    </a>
+                    </noindex>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="bitrix24-presentation">
+                <div class="bitrix24-presentation__image">
+                    <img src="{% static 'img/bitrix24/presentations-3.png' %}">
+                </div>
+                <div class="bitrix24-presentation__content">
+                    <noindex>
+                    <a href="https://www.bitrix24.ru/features/ol.php?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__name"> Открытые линии - Битрикс24.
+                    </a>
+                    </noindex>
+                    <div class="bitrix24-presentation__description"> Открытые линии объединяют в CRM цифровые каналы коммуникаций с клиентами: чат на сайте, ВКонтакте, Facebook, Instagram, Whatsapp, Telegram, Viber и другие.
+                    </div>
+                    <noindex>
+                    <a href="https://www.bitrix24.ru/features/ol.php?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__more">
+                        <span class="bitrix24-presentation__more-text">Подробнее</span>
+                        <span class="bitrix24-presentation__more-circle">
+                        <img src="{% static 'img/bitrix24/arrow.svg' %}">
+                        </span>
+                    </a>
+                    </noindex>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="bitrix24-presentation">
+                <div class="bitrix24-presentation__image">
+                    <img src="{% static 'img/bitrix24/presentations-4.png' %}">
+                </div>
+                <div class="bitrix24-presentation__content">
+                    <noindex>
+                    <a href="https://www.bitrix24.ru/features/company.php?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__name"> Компания - Битрикс24.
+                    </a>
+                    </noindex>
+                    <div class="bitrix24-presentation__description"> Компания помогает работать вместе: чат, диск, календарь, группы, рабочие отчеты, бизнес-процессы и другие инструменты для совместной работы.
+                    </div>
+                    <noindex>
+                    <a href="https://www.bitrix24.ru/features/company.php?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__more">
+                        <span class="bitrix24-presentation__more-text">Подробнее</span>
+                        <span class="bitrix24-presentation__more-circle">
+                        <img src="{% static 'img/bitrix24/arrow.svg' %}">
+                        </span>
+                    </a>
+                    </noindex>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- РЕЗУЛЬТАТЫ -->
+        <div class="info-section info-section--bitrix24-result">
+            <div class="container">
+                <div class="info-section-list__header row">
+                    <div class="col-12">
+                        <div class="title-base"> Результат нашей работы </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container container--narrow">
+                <div class="row">
+                    <div class="info-section__image col-lg-6 col-md-12">
+                        <img src="{% static 'img/bitrix24/result-big.png' %}" class="js-tilt-block">
+                    </div>
+                    <div class="info-section__text col-lg-6 col-md-12">
+                        <p> Итогом нашей работы будет подготовленный к полноценной работе корпоративный портал Битрикс24 с настроенной CRM, карточками компаний, сделок, контактов и т.д.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="title-base title-base--small" style="max-width: 480px"> Наши клиенты уже после первого этапа работ получат:
+                </div>
+                <div class="row info-section-list__items">
+                    <div class="col-lg-4 col-md-6 col-sm-12"> 
+                        <div class="info-section-list-item"> 
+                            <div class="info-section-list-item__image">
+                                <img src="{% static 'img/bitrix24/result-1.png' %}">
+                            </div>
+                            <div class="info-section-list-item__content">
+                                <div class="info-section-list-item__title"> Фиксируемая связь с сохранением записей телефонных разговоров
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="info-section-list-item">
+                            <div class="info-section-list-item__image">
+                                <img src="{% static 'img/bitrix24/result-2.png' %}">
+                            </div>
+                            <div class="info-section-list-item__content">
+                                <div class="info-section-list-item__title"> Общий и личные корпоративные электронные адреса
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="info-section-list-item">
+                            <div class="info-section-list-item__image">
+                                <img src="{% static 'img/bitrix24/result-3.png' %}">
+                            </div>
+                            <div class="info-section-list-item__content">
+                                <div class="info-section-list-item__title"> Сервис обратного звонка </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="info-section-list-item">
+                            <div class="info-section-list-item__image">
+                                <img src="{% static 'img/bitrix24/result-4.png' %}">
+                            </div>
+                            <div class="info-section-list-item__content">
+                                <div class="info-section-list-item__title"> Постоянно обновляемая база данных клиентов </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="info-section-list-item">
+                            <div class="info-section-list-item__image">
+                                <img src="{% static 'img/bitrix24/result-5.png' %}">
+                            </div>
+                            <div class="info-section-list-item__content">
+                                <div class="info-section-list-item__title"> Возможность мониторинга ключевых параметров CRM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="info-section-list-item">
+                            <div class="info-section-list-item__image">
+                                <img src="{% static 'img/bitrix24/result-6.png' %}">
+                            </div>
+                            <div class="info-section-list-item__content">
+                                <div class="info-section-list-item__title"> Возможность контроля сроков обработки лидов
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="title-base title-base--small" style="max-width: 540px"> Результатом второго этапа является:
+            </div>
+            <div class="row info-section-list__items info-section-list__items--two">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="info-section-list-item">
+                        <div class="info-section-list-item__image">
+                            <img src="{% static 'img/bitrix24/result-two-1.png' %}">
+                        </div>
+                        <div class="info-section-list-item__content">
+                        <div class="info-section-list-item__title"> Настройка индивидуальных прав доступа к CRM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="info-section-list-item">
+                        <div class="info-section-list-item__image">
+                            <img src="{% static 'img/bitrix24/result-two-2.png' %}">
+                        </div>
+                        <div class="info-section-list-item__content">
+                            <div class="info-section-list-item__title"> Подключение формы обратной связи </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="info-section-list-item">
+                        <div class="info-section-list-item__image">
+                            <img src="{% static 'img/bitrix24/result-two-3.png' %}">
+                        </div>
+                        <div class="info-section-list-item__content">
+                            <div class="info-section-list-item__title"> Интеграция сообщений в соцсетях и мессенджерах
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="info-section-list-item">
+                        <div class="info-section-list-item__image">
+                            <img src="{% static 'img/bitrix24/result-two-4.png' %}">
+                        </div>
+                        <div class="info-section-list-item__content">
+                            <div class="info-section-list-item__title">
+                                Автоматизация планирования встреч, звонков и напоминаний
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container container--narrow">
+            <div class="row">
+                <div class="info-section__text col-lg-6 col-md-12">
+                    <p> Специалисты CRMLabs также составляют 2 персонализированных отчета на основании данных CRM и организуют обучение сотрудников (по предварительной договоренности).
+                    </p>
+                </div>
+                <div class="info-section__image col-lg-6 col-md-12">
+                    <img src="{% static 'img/bitrix24/result-two-big.png' %}" class="js-tilt-block">
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- СРОКИ ВНЕДРЕНИЯ -->
+        <div class="info-section info-section--bitrix24-timing">
+            <div class="container">
+                <div class="info-section-list__header row">
+                    <div class="col-12">
+                        <div class="title-base"> Сроки внедрения </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="info-section__image col-lg-6 col-md-12">
+                        <img src="{% static 'img/bitrix24/timing-1.png' %}" class="js-tilt-block">
+                    </div>
+                    <div class="info-section__text col-lg-6 col-md-12">
+                        <p> На сроки влияет скорость нашего взаимодействия с заказчиком. 
+                            Чем разрозненней информация, которую мы будем получать, тем сложнее и, 
+                            соответственно, дольше длится процесс интеграции. 
+                            Если нам удастся наладить взаимодействие с заказчиком, внедрение Битрикс24 пройдет намного быстрее. 
+                            В любом случае на реализацию одного этапа у нас уходит не больше 10 рабочих дней.
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-not-first">
+                    <div class="info-section__text col-lg-6 col-md-12">
+                        <p> 
+                            Итогом двух этапов интеграции является готовый к работе корпоративный портал, 
+                            который соответствует ожиданиям и целям заказчика. 
+                            Битрикс24 позволит вам существенно повысить эффективность своего бизнеса!
+                        </p>
+                        <p> 
+                            А специалисты CRMLabs помогут реализовать ваши идеи, 
+                            которые обязательно возникнут во время работы с CRM системой Битрикс24. 
+                            Сотрудники нашей компании проконсультируют по любым вопросам, которые касаются функционирования вашей CRM.
+                        </p>
+                        <p> 
+                            Поэтому не упустите шанс воспользоваться пакетами часов на внедрение 
+                            и/или сопровождение вашего Битрикс24, и тем самым повысить эффективность использования своего корпоративного портала.
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-6 col-md-12">
+                        <img src="{% static 'img/bitrix24/timing-2.png' %}" class="js-tilt-block">
+                    </div>
+                </div>
+                <div class="row info-section__item-not-first">
+                    <div class="info-section__image col-lg-6 col-md-12">
+                        <img src="{% static 'img/bitrix24/timing-3.png' %}" class="js-tilt-block">
+                    </div>
+                    <div class="info-section__text col-lg-6 col-md-12">
+                        <p> 
+                            Наша компания также оказывает услуги индивидуальной настройки Битрикс24. 
+                            Опыта и навыков специалистов CRMLabs достаточно для реализации даже неординарных идей! 
+                            Поэтому оставляйте заявки на нашем сайте или прямо сейчас звоните по указанным номерам телефона! 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- СЕРТИФИКАТЫ -->
+        <div class="info-section info-section--bitrix24-certificates">
+            <div class="container">
+                <div class="info-section-list__header row">
+                    <div class="col-12">
+                        <div class="title-base">
+                            <h3 class="seo-title">Наши компетенции в Битрикс24:</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row info-section-list__items">
+                    {% for pic in Bitrix24page_Certificate_list %}
+                    <div class="col-md-6 col-sm-12">
+                        
+                        <div class="certificate-item">
+                            <div class="certificate-item__image">
+                                <img src="{{ pic.certificateImg.url }}" alt="{{ pic.certificateTitle }}">
+                            </div>
+                            <div class="info-section-list-item__title"> {{ pic.certificateTitle }}
+                            </div>
+                        </div>
+                        
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- ЧТО ДЕЛАТЬ? -->
+        <div class="info-section" style="margin-top: 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-base"> Что делать после внедрения? </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="info-section__text offset-md-2 col-md-8">
+                        <p> 
+                            После завершения второго этапа заказчик получает 
+                            готовый к работе корпоративный портал, учитывающий все цели и нужды компании. 
+                            Если же у заказчика возникнут проблемы при использовании корпоративного портала или новые идеи, 
+                            требующие изменения настроек в Битрикс24, он может воспользоваться услугой сопровождения/поддержки CRM системы. 
+                            Эта услуга позволит использовать корпоративный портал Битрикс24 по максимуму.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ФОРМА ОСТАЛИСЬ ВОПРОСЫ?-->
+        <div class="section--lapkin-form lapkin-form">
+            <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"857188",hash:"9c87c4cae09b16f0d24f64064c65b686",locale:"ru"})}(window,0,"amo_forms_","params","load");</script><script id="amoforms_script_857188" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1635943970"></script>
+
+            <div class="container">
+                <div class="row">
+                    <div class="lapkin-form--wrapper col-xl-10 offset-xl-1 col-sm-12 offset-sm-0">
+
+                        <!--contact-form-xffdh1dndlpzrffhxe1itlskrpf8m0gf-->
+                        <!-- <form class="lapkin-form--form" id="contact-form-xffdh1dndlpzrffhxe1itlskrpf8m0gf">
+                            <input type="hidden" name="sessid" id="sessid_3" value="b9d33c21163b303dc19ed1496bdc6851">
+                            <input type="hidden" name="id" value="contact">
+                            <input type="hidden" name="required" value="bmFtZSxwaG9uZQ==">
+                            <input type="hidden" name="url" value="https://lapkinlab.ru/amocrm/"> <h2 class="lapkin-form--title text-center">
+                                Остались вопросы? Напишите нам!
+                            </h2>
+                            <div class="lapkin-form--fields">
+                                <div class="form-field form-field-text">
+                                    <label for="contact-form-name"></label>
+                                    <input id="contact-form-name" type="text" name="name" placeholder="Ваше имя *" required="">
+                                </div>
+                                <div class="form-field form-field-text">
+                                    <label for="contact-form-phone"></label>
+                                    <input id="contact-form-phone" type="tel" name="phone" placeholder="Телефон *" required="" im-insert="true">
+                                </div>
+                                <div class="form-field form-field-text">
+                                    <label for="contact-form-email"></label>
+                                    <input id="contact-form-email" type="text" name="email" placeholder="Почта">
+                                </div>
+                                <div class="form-field form-field-textarea">
+                                    <label for="contact-form-message"></label>
+                                    <textarea id="contact-form-message" name="message" placeholder="Напишите ваш вопрос для наших специалистов"></textarea>
+                                </div>
+                            </div>
+                            <div class="lapkin-form--privacy">
+                                <p>
+                                    Нажимая на кнопку «Отправить», я&nbsp;даю согласие на 
+                                    
+                                    <a class="privacy-policy" href="/privacy-policy/" rel="nofollow">обработку персональных данных</a>
+                                    
+                                </p>
+                            </div>
+                            <div class="lapkin-form--actions">
+                                <div class="form-action">
+                                    <button class="button js-send-form" type="submit" data-metrika-target="">
+                                        Отправить
+                                    </button>
+                                </div>
+                            </div>
+                        </form> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!--/main-->

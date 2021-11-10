@@ -1,0 +1,1247 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Внедрение Битрикс24 и настройка CRM | Автоматизация бизнес-процессов</title>
+    <meta name="description" content="Интернет-компания LapkinLab" />
+    <!--meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--styles-->
+    <!--favicons-->
+    <link rel="apple-touch-icon" sizes="120x120" href="/local/templates/lapkinlab/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/local/templates/lapkinlab/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/local/templates/lapkinlab/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/local/templates/lapkinlab/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/local/templates/lapkinlab/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/local/templates/lapkinlab/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
+    <!--opengraph-->
+    <meta property="og:title" content="Внедрение Битрикс24 и настройка CRM | Автоматизация бизнес-процессов">
+    <meta property="og:description" content="Интернет-компания LapkinLab">
+    <meta property="og:image" content="https://lapkinlab.ru/local/templates/lapkinlab/images/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lapkinlab.ru/bitrix24/">
+    <link href="{% static '/css/style.css' %}" type="text/css" data-template-style="true" rel="stylesheet" />
+    <link rel="canonical" href="https://lapkinlab.ru/bitrix24/">
+  </head>
+  <body class="inner">
+    <div id="svg-container" hidden></div>
+    <!--schema.org Organization-->
+    <div class="hidden" hidden itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Продвижение сайтов в Краснодаре - SEO (СЕО) раскрутка в ТОП 10 Яндекс и Google (Гугл)">
+      <meta itemprop="description" content="Заказать SEO продвижение сайтов в Краснодаре. Цены на раскрутку и поисковую оптимизацию в Яндексе и Google. Быстрый топ 3, топ-10.">
+      <a itemprop="url" href="https://lapkinlab.ru"></a>
+      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <meta itemprop="postalCode" content="">
+        <meta itemprop="addressCountry" content="Россия">
+        <meta itemprop="addressLocality" content="RU">
+        <meta itemprop="streetAddress" content="г. Краснодар, ул. Восточно-Кругликовская, 28/1"></div>
+        <meta itemprop="telephone" content="8 800 301-00-19">
+        <meta itemprop="email" content="ya@lapkinlab.ru"></div>
+        <!--mobile menu-->
+        <div class="mobile-menu">
+          <i class="lapicon lapicon-logo-small "></i>
+          <div class="about">профессиональное поисковое продвижение, создание сайтов и реклама
+          </div>
+          <button class="close btn-noradius js-mobile-menu--close" type="button">
+            <i class="lapicon lapicon-close "></i>
+          </button>
+          <div class="mobile-menu--wrapper">
+            <div class="mobile-menu--buttons">
+              <div class="header--top-buttons--callback">
+                <a class="btn btn-noradius js-open-modal" href="#" data-action="openModal" data-modal="callback">
+                  <i class="lapicon lapicon-call-white "></i> Заказать звонок </a> </div> <div class="header--top-buttons--audit"> <a class="btn btn-noradius btn-dark js-open-modal" href="#" data-action="openModal" data-modal="audit">Заказать аудит</a> </div> <div class="header--top-buttons--brief"> <noindex> <a class="btn btn-noradius btn-darken" rel="nofollow" href="https://docs.google.com/forms/d/e/1FAIpQLSeS23dLSflliDH4Cb1cejYkDO6KGrKYwATsz6h1IA4IdbJwyQ/viewform" target="_blank">Заполнить бриф</a> </noindex> </div> </div> <!--main menu--> <ul class="nav"> <li class="active"> <a href="/" class="active"> Продвижение </a> <ul> <li class=""> <a href="/seo/">SEO аудит </a> </li> <li class=""> <a href="/smm/">SMM продвижение </a> </li> <li class=""> <a href="/target/">Таргетированная реклама </a> </li> </ul></li> <li class=""> <a href="/ppc/" class=""> Контекстная реклама </a> <ul> <li class=""> <a href="/ppc/yandex-direct/">Контекстная реклама в Яндекс.Директ </a> </li> <li class=""> <a href="/ppc/google-adwords/">Контекстная реклама в Google AdWords </a> </li> </ul></li> <li class=""> <a href="/sites/" class=""> Разработка сайтов </a> <ul> <li class=""> <a href="/sites/calculator/">Калькулятор стоимости сайта </a> </li> <li class=""> <a href="/sites/online-store/">Разработка интернет-магазина </a> </li> <li class=""> <a href="/sites/bitrix/">Разработка сайтов на Битрикс </a> </li> <li class=""> <a href="/sites/corporatesite/">Разработка корпоративного сайта </a> </li> </ul></li> <li class=""> <a href="/chat-bot/" class=""> Чат-боты </a> <ul> <li class=""> <a href="/chat-bot/telegram/">Телеграмм </a> </li> </ul></li> <li class=""> <a class=""> Внедрение CRM </a> <ul> <li class=""> <a href="/amocrm/">amoCRM </a> </li> <li class="active"> <a href="/bitrix24/">Битрикс24 </a> </li> <li class=""> <a href="/crm-dlya-oteley/">CRM для отелей </a> </li> </ul></li> <li class=""> <a href="/contacts/" class=""> Контакты </a> </li> </ul> </div></div> <div class="wrapper" id="top"> <!--header--> <header id="header" class="header"> <!--header topbar--><div class="header--top"> <div class="container"> <div class="row"> <div class="header--top-wrapper col-12"> <div class="header--top-logo"> <a href="/" class="header--top-logo--base"><img src="/local/templates/lapkinlab/images/logo.png" alt="LapkinLab"></a> <a href="/" class="header--top-logo--small"><img src="/local/templates/lapkinlab/images/small-logo.png" alt="LapkinLab"></a> </div> <div class="header--top-location"> <div class="header--top-location--current"> <i class="lapicon lapicon-location "></i><span class="label">Ваш город:</span> <span class="city">Краснодар</span> <div class="header--top-location--select"> <ul> <li class="active"><a href="/" class="active" >Краснодар</a></li> <li><a href="http://msk.lapkinlab.ru/">Москва</a></li> </ul> </div> </div> </div> <div class="header--top-phones"> <i class="lapicon lapicon-call "></i> <a class='roistat_phone' href='tel:88003010019'><span class='country'>8</span>&nbsp;<span class='code'>800</span>&nbsp;<span class='number'>301-00-19</span></a> </div> <div class="header--nav-hamburger js-mobile-menu"><i class="lapicon lapicon-menu "></i></div> <div class="header--top-buttons"> <div class="header--top-buttons--callback"> <a class="btn btn-noradius js-open-modal" href="#" data-action="openModal" data-modal="callback"> <i class="lapicon lapicon-call-white "></i> Заказать звонок </a> </div> <div class="header--top-buttons--audit"> <a class="btn btn-noradius btn-dark js-open-modal" href="#" data-action="openModal" data-modal="audit">Заказать аудит</a> </div> <div class="header--top-buttons--brief"> <noindex> <a class="btn btn-noradius btn-darken js-send-ym" rel="nofollow" href="https://docs.google.com/forms/d/e/1FAIpQLSeS23dLSflliDH4Cb1cejYkDO6KGrKYwATsz6h1IA4IdbJwyQ/viewform" target="_blank"> Заполнить бриф</a> </noindex> </div> </div> </div> </div> </div></div> <!--header navigation-->
+                    <div class="header--nav"> <div class="container"> <div class="row"> <div class="header--nav-wrapper col-12"> <div class="header--nav-logo"> <a href="/"><img src="/local/templates/lapkinlab/images/logo.png" alt="LapkinLab"><span class="about">профессиональное поисковое продвижение, создание сайтов и реклама</span></a> </div> <div class="header--nav-menu"> <!--main menu--> <ul class="nav"> <li class="active"> <a href="/" class="active"> Продвижение </a> <ul> <li class=""> <a href="/seo/">SEO аудит </a> </li> <li class=""> <a href="/smm/">SMM продвижение </a> </li> <li class=""> <a href="/target/">Таргетированная реклама </a> </li> </ul></li> <li class=""> <a href="/ppc/" class=""> Контекстная реклама </a> <ul> <li class=""> <a href="/ppc/yandex-direct/">Контекстная реклама в Яндекс.Директ </a> </li> <li class=""> <a href="/ppc/google-adwords/">Контекстная реклама в Google AdWords </a> </li> </ul></li> <li class=""> <a href="/sites/" class=""> Разработка сайтов </a> <ul> <li class=""> <a href="/sites/calculator/">Калькулятор стоимости сайта </a> </li> <li class=""> <a href="/sites/online-store/">Разработка интернет-магазина </a> </li> <li class=""> <a href="/sites/bitrix/">Разработка сайтов на Битрикс </a> </li> <li class=""> <a href="/sites/corporatesite/">Разработка корпоративного сайта </a> </li> </ul></li> <li class=""> <a href="/chat-bot/" class=""> Чат-боты </a> <ul> <li class=""> <a href="/chat-bot/telegram/">Телеграмм </a> </li> </ul></li> <li class=""> <a class=""> Внедрение CRM </a> <ul> <li class=""> <a href="/amocrm/">amoCRM </a> </li> <li class="active"> <a href="/bitrix24/">Битрикс24 </a> </li> <li class=""> <a href="/crm-dlya-oteley/">CRM для отелей </a> </li> </ul></li> <li class=""> <a href="/contacts/" class=""> Контакты </a> </li> </ul> </div> </div> </div> </div></div> </header><!--/header--> <!--main--> <main id="main-content"> <!--breadcrumb-->
+                      <nav aria-label="breadcrumb" class="breadcrumb--wrapper">
+                        <div class="container"><div class="row"><ul class="breadcrumb col-12" itemscope itemtype="http://schema.org/BreadcrumbList"><li class="breadcrumb-item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="/" title="Главная" itemprop="item"><span itemprop="name">Главная</span></a><meta itemprop="position" content="1"></li><li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <meta itemprop="position" content="2"><span itemprop="name">Внедрение и настройка CRM Битрикс24 | Автоматизация бизнес-процессов</span></li></ul></div></div></nav>
+                        <!--/breadcrumb-->
+                        <div class="page page-ppc page--bitrix24">
+                          <div class="ppc-slider">
+                            <div class="ppc-slider-image" style="background-image:url(/local/templates/lapkinlab/images/bitrix24/header-bgi.png)"></div>
+                            <div class="container">
+                              <div class="ppc-slider--wrapper row">
+                                <div class="ppc-slider--slides col-xl-6 offset-xl-1 col-lg-7 offset-lg-0 col-md-12 offset-md-0">
+                                  <div class="slide slide-">
+                                    <div class="slide-title">
+                                      <h1> Внедрение <br>
+                                        Битрикс24 </h1>
+                                      </div>
+                                      <div class="slide-title__text"> Внедрим CRM быстро и <br> без головной боли </div>
+                                    </div>
+                                  </div>
+                                  <div class="slider--form col-xl-4 offset-xl-0 col-lg-5 offset-lg-0 col-md-12 offset-md-0"> <!--bitrix24-form-mn7id7mrx4k11r4wv34r347wa2o87lc2-->
+                                    <form class="lapkin-form--form" id="bitrix24-form-mn7id7mrx4k11r4wv34r347wa2o87lc2">
+                                      <input type="hidden" name="sessid" id="sessid" value="0ca8c2d10e573f7619f3b9bb194b1933" />
+                                      <input type="hidden" name="id" value="bitrix24">
+                                      <input type="hidden" name="required" value="bmFtZSxwaG9uZQ==">
+                                      <input type="hidden" name="url" value="https://lapkinlab.ru/bitrix24/">
+                                      <div class="lapkin-form--wrapper">
+                                        <h2 class="lapkin-form--title text-center">Узнать стоимость внедрения</h2>
+                                        <div class="lapkin-form--fields">
+                                          <div class="form-field form-field-text">
+                                            <label for="bitrix24-form-name"></label>
+                                            <input id="bitrix24-form-name" type="text" name="name" placeholder="Ваше имя *" required >
+                                          </div>
+                                          <div class="form-field form-field-text">
+                                            <label for="bitrix24-form-phone"></label>
+                                            <input id="bitrix24-form-phone" type="tel" name="phone" placeholder="Телефон *" required >
+                                          </div>
+                                          <div class="form-field form-field-text">
+                                            <label for="bitrix24-form-site"></label>
+                                            <input id="bitrix24-form-site" type="text" name="site" placeholder="Сайт" >
+                                          </div>
+                                        </div>
+                                        <div class="lapkin-form--privacy">
+                                          <p>Нажимая на кнопку «Получить расчет», я&nbsp;даю согласие на <!--noindex-->
+                                            <a class="privacy-policy" href="/privacy-policy/" rel="nofollow">обработку персональных данных</a>
+                                            <!--/noindex-->
+                                          </p>
+                                        </div>
+                                        <div class="lapkin-form--actions">
+                                          <div class="form-action">
+                                            <button class="button js-send-form" type="submit" data-metrika-target="">Получить расчет</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="adwords-section adwords-section--bitrix24">
+                              <div class="container">
+                                <div class="adwords-section__wrapper row">
+                                  <div class="adwords-section__image col-lg-6 col-md-12">
+                                    <img src="/local/templates/lapkinlab/images/bitrix24/first.png" class="js-tilt-block">
+                                  </div>
+                                  <div class="adwords-section__content col-lg-6 col-md-12">
+                                    <img src="/local/templates/lapkinlab/images/bitrix24/bitrix24-logo.png" style="margin-bottom: 10px; margin-left: -10px;">
+                                    <div class="adwords-section__text"> Компания LapkinLab оказывает услуги пакетного внедрения системы Битрикс24. Наши специалисты занимаются интеграцией, индивидуальной настройкой, обучением и технической поддержкой сервиса Битрикс24.
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="info-section info-section--batch-implementation">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-12">
+                                    <div class="title-base"> Пакетная настройка Битрикс24 </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="info-section__text col-lg-6 col-md-12">
+                                    <p> Компания «1С-Битрикс» является разработчиком и провайдером сервиса для обеспечения эффективного управления бизнесом Битрикс24. Однако эта компания не оказывает услуги по интеграции и техническому сопровождению данного сервиса. В этом направлении работают сертифицированные партнеры «1С-Битрикс».
+                                    </p>
+                                    <p> Одним из таких партнеров является LapkinLab. Наши опытные интеграторы выполнят все необходимые работы по настройке CRM Битрикс24 и увеличению эффективности функционирования этого сервиса.
+                                    </p>
+                                  </div>
+                                  <div class="info-section__image col-lg-6 col-md-12">
+                                    <img src="/local/templates/lapkinlab/images/bitrix24/two.png" class="js-tilt-block">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="info-section info-section--bitrix24-price">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-12">
+                                    <div class="title-base"> Стоимость внедрения </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="info-section__image col-lg-6 col-md-12">
+                                    <img src="/local/templates/lapkinlab/images/bitrix24/price.png" class="js-tilt-block">
+                                  </div>
+                                  <div class="info-section__text col-lg-6 col-md-12">
+                                    <p> Цена внедрения Битрикс24 зависит от технического задания заказчика иколичества сотрудников в вашей компании. Как показывает наша практика, средняя цена интеграции системы в расчете на одного сотрудника равна 2000 рублей.
+                                    </p>
+                                    <button class="btn js-open-modal" data-action="openModal" data-modal="bitrix24-price"> Узнать стоимость для вашего проекта
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- КАЛЬКУЛЯТОР -->
+                            <div class="bitrix24-rates-sections">
+                              <section class="calculator bitrix24-rates-section">
+                                <div class="container">
+                                  <h2 class="title-base">Калькулятор стоимости внедрения Битрикс24 CRM</h2>
+                                  <div class="text">
+                                    <p class="bitrix24-rates-section__sub-title">Ежедневно помогаем нашим клиентам с решением любые вопросов с Битрикс24!
+                                    </p>
+                                  </div>
+                                  <div class="menu">
+                                    <button type="button" class="btn btn-success tariff active" data-id="start">
+                                      <i class="fa fa-plus-circle"></i>
+                                      <span>Пакет "Старт" 19 900 руб.</span>
+                                    </button>
+                                    <button type="button" class="btn btn-success tariff" data-id="automation">
+                                      <i class="fa fa-plus-circle"></i>
+                                      <span>Пакет "Автоматизация" 39 900 руб.</span>
+                                    </button>
+                                    <button type="button" class="btn btn-success tariff" data-id="maximum">
+                                      <i class="fa fa-plus-circle"></i>
+                                      <span>Пакет "Максимум" от 59 900 руб.</span>
+                                    </button>
+                                  </div>
+                                  <form action="" class="js-calc-form">
+                                    <div class="table-responsive b24-rate-table">
+                                      <table class="table table-hover">
+                                        <thead>
+                                          <tr class="b24-rate-table__full">
+                                            <td colspan="4" class="text-center "> Общие настройки </td>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr class="">
+                                            <td>
+                                              <input class="price-item" type="checkbox" value="1" data-id="1" data-price="500" checked>
+                                            </td>
+                                            <td colspan="2"> Подбор тарифа и регистрация облачного портала Битрикс24 </td>
+                                            <td class="text-right"> 500 руб. </td>
+                                          </tr>
+                                          <tr class="">
+                                            <td>
+                                              <input class="price-item" type="checkbox" value="2" data-id="2" data-price="1000" checked>
+                                            </td>
+                                            <td colspan="2"> Приглашение сотрудников в CRM </td>
+                                            <td class="text-right"> 1 000 руб. </td>
+                                          </tr>
+                                          <tr class="">
+                                            <td>
+                                              <input class="price-item" type="checkbox" value="3" data-id="3" data-price="1500" checked>
+                                            </td>
+                                            <td colspan="2"> Создание структуры отдела продаж </td>
+                                            <td class="text-right"> 1 500 руб. </td>
+                                          </tr>
+                                          <tr class="">
+                                            <td>
+                                              <input class="price-item" type="checkbox" value="4" data-id="4" data-price="500" checked>
+                                            </td>
+                                            <td> Установка десктопного приложения </td>
+                                            <td>
+                                              <span>3 устройства</span> десктоп ноутбук *
+                                            </td>
+                                            <td class="text-right"> 500 руб. </td>
+                                          </tr>
+                                          <tr class="">
+                                            <td>
+                                              <input class="price-item" type="checkbox" value="5" data-id="5" data-price="500" checked>
+                                            </td>
+                                            <td> Установка мобильного приложения </td>
+                                            <td>
+                                              <span>3 устройства</span> iOS/Android *
+                                            </td>
+                                            <td class="text-right"> 500 руб. </td>
+                                          </tr>
+                                          <tr class="">
+                                            <td>
+                                              <input class="price-item" type="checkbox" value="6" data-id="6" data-price="1000" checked>
+                                            </td>
+                                            <td colspan="2"> Оптимизация карточки лида, контакта, сделки </td>
+                                            <td class="text-right"> 1 000 руб. </td>
+                                          </tr>
+                                          <tr class="">
+                                            <td>
+                                              <input class="price-item" type="checkbox" value="7" data-id="7" data-price="1500" checked>
+                                            </td>
+                                            <td colspan="2"> Настройка типовых фильтров лидов, сделок, дел </td>
+                                            <td class="text-right"> 1 500 руб. </td>
+                                          </tr>
+                                          <tr class="">
+                                            <td>
+                                              <input class="price-item" type="checkbox" value="8" data-id="8" data-price="1500" checked>
+                                            </td>
+                                            <td colspan="2"> Настройка стадий лидов и сделок </td>
+                                            <td class="text-right"> 1 500 руб. </td>
+                                          </tr>
+                                          <tr class="">
+                                            <td>
+                                              <input class="price-item" type="checkbox" value="9" data-id="9" data-price="1000">
+                                            </td>
+                                            <td colspan="2"> Создание 2-го направления сделок (другие этапы воронки для другого направления бизнеса)
+                                            </td>
+                                            <td class="text-right"> 1000 руб. </td>
+                                          </tr>
+                                          <tr class="">
+                                            <td>
+                                              <input class="price-item" type="checkbox" value="10" data-id="10" data-price="1500">
+                                            </td>
+                                            <td colspan="2"> Настройка стадий лидов и сделок для второго направления </td>
+                                            <td class="text-right"> 1 500 руб. </td>
+                                          </tr>
+                                          <tr class="">
+                                            <td>
+                                              <input class="price-item" type="checkbox" value="11" data-id="11" data-price="1500">
+                                            </td>
+                                            <td> Настройка прав доступа к CRM </td>
+                                            <td>
+                                              <span>до 3 ролей</span>
+                                            </td>
+                                            <td class="text-right"> 1 500 руб. </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <table class="table table-hover">
+                                        <thead> <tr class="b24-rate-table__full">
+                                          <td colspan="4" class="text-center"> Контроль входящих заявок и общения с клиентами </td>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="12" data-id="12" data-price="2900" checked>
+                                          </td>
+                                          <td> Подключение телефонии для входящих звонков </td>
+                                          <td>
+                                            <span>Штатная или внешняя SIP телефония*</span>
+                                          </td>
+                                          <td class="text-right"> 2 900 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="13" data-id="13" data-price="500" checked>
+                                          </td>
+                                          <td colspan="2"> Настройка номера для исходящих звонков </td>
+                                          <td class="text-right"> 500 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="14" data-id="14" data-price="500" checked>
+                                          </td>
+                                          <td colspan="2"> Настройка записи телефонных разговоров </td>
+                                          <td class="text-right"> 500 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="15" data-id="15" data-price="500" checked>
+                                          </td>
+                                          <td colspan="2"> Подключение к CRM общего корпоративного электронного адреса (<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="177e7971785774787a6776796e396562">[email&#160;protected]</a>)
+                                          </td>
+                                          <td class="text-right"> 500 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="16" data-id="16" data-price="2300" checked>
+                                          </td>
+                                          <td colspan="2"> Подключение к CRM электронных адресов менеджеров </td>
+                                          <td class="text-right"> 2 500 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="17" data-id="17" data-price="900" checked>
+                                          </td>
+                                          <td> Подключение сервиса обратный звонок для одного сайта </td>
+                                          <td>
+                                            <span>Установка виджета</span> или код для размещения на сайте*
+                                          </td>
+                                          <td class="text-right"> 900 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="18" data-id="18" data-price="2800" checked>
+                                          </td>
+                                          <td colspan="2"> Практикум по обработке и конвертации лидов, ведению сделок по стадиям для пользователей CRM
+                                          </td>
+                                          <td class="text-right"> 2 500 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="19" data-id="19" data-price="1500" checked>
+                                          </td>
+                                          <td colspan="2"> Настройка экранов отчета в категориях Лиды и Сделки </td>
+                                          <td class="text-right"> 1 500 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="20" data-id="20" data-price="1500" checked>
+                                          </td>
+                                          <td colspan="2"> Настройка стадий лидов и сделок </td>
+                                          <td class="text-right"> 1 500 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="21" data-id="21" data-price="500">
+                                          </td>
+                                          <td colspan="2"> Настройка CRM-формы (заявки с сайта). Без подключения систем оплаты и настройки условий
+                                          </td>
+                                          <td class="text-right"> 500 руб.</td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="22" data-id="22" data-price="1000">
+                                          </td>
+                                          <td> Подключение соцсетей и мессенджеров (открытая линия) </td>
+                                          <td>
+                                            <span>ВК, FB, Telegram, Instagram*</span>
+                                          </td>
+                                          <td class="text-right"> 1 000 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="23" data-id="23" data-price="2500">
+                                          </td>
+                                          <td colspan="2"> Практикум по обработке и конвертации лидов, ведению сделок по стадиям из подключенных каналов </td>
+                                          <td class="text-right"> 2 500 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td> 
+                                            <input class="price-item" type="checkbox" value="24" data-id="24" data-price="1000">
+                                          </td>
+                                          <td colspan="2"> Настройка робота контроля лида/сделки (уведомление о просроченной стадии)</td>
+                                          <td class="text-right"> 1 000 руб. </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <table class="table table-hover">
+                                      <thead>
+                                        <tr class="b24-rate-table__full">
+                                          <td colspan="4" class="text-center"> Повторные продажи, автоматизация </td>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="25" data-id="25" data-price="1900">
+                                          </td>
+                                          <td colspan="2"> Регулярный контакт. Автопланирование следующего контакта. Настройка робота
+                                          </td>
+                                          <td class="text-right"> 1900 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="26" data-id="26" data-price="1900">
+                                          </td>
+                                          <td colspan="2"> Повторные продажи. Автозадание на повторную продажу менеджеру. Настройка робота </td>
+                                          <td class="text-right"> 1900 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="27" data-id="27" data-price="1900">
+                                          </td>
+                                          <td colspan="2"> Кросс-продажи. Автозадание на продажу смежного продукта/услуги. Настройка робота
+                                          </td>
+                                          <td class="text-right"> 1900 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="28" data-id="28" data-price="1900">
+                                          </td>
+                                          <td colspan="2"> Автоматическое подключение ретаргетинга для соц.сетей по лидам и сделкам в одной из стадий </td>
+                                          <td class="text-right"> 1900 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="29" data-id="29" data-price="1900">
+                                          </td>
+                                          <td colspan="2"> Настройка 2 отчетов CRM в конструкторе отчетов </td>
+                                          <td class="text-right"> 1900 руб. </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    <table class="table table-hover">
+                                      <thead>
+                                        <tr class="b24-rate-table__full">
+                                          <td colspan="4" class="text-center"> Продвинутые функции </td>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="30" data-id="30" data-price="6000">
+                                          </td>
+                                          <td colspan="2"> Настройка интеграции с 1С </td>
+                                          <td class="text-right"> от 6000 руб. </td>
+                                        </tr>
+                                        <tr class="">
+                                          <td>
+                                            <input class="price-item" type="checkbox" value="31" data-id="31" data-price="10000"> </td>
+                                            <td> Разработка приложений </td>
+                                            <td> <span>Для коробочных и облачных версий*</span> </td>
+                                            <td class="text-right"> от 10 000 руб. </td>
+                                          </tr>
+                                          <tr class="">
+                                            <td>
+                                              <input class="price-item" type="checkbox" value="32" data-id="32" data-price="11500"> </td>
+                                              <td> Создание сайта в <a href="/sites/" class="link">конструкторе Сайты24</a>
+                                              </td>
+                                              <td> <span>Персональные блоки*</span> </td>
+                                              <td class="text-right"> от 11 500 руб. </td>
+                                            </tr>
+                                            <tr class="">
+                                              <td>
+                                                <input class="price-item" type="checkbox" value="33" data-id="33" data-price="30000">
+                                              </td>
+                                              <td colspan="2"> Создание интернет-магазина в <a href="/sites/" class="link">конструкторе Сайты24</a>
+                                              </td>
+                                              <td class="text-right"> от 30 000 руб. </td>
+                                            </tr>
+                                            <tr class="">
+                                              <td>
+                                                <input class="price-item" type="checkbox" value="34" data-id="34" data-price="3000">
+                                              </td>
+                                              <td colspan="2"> Настройка Email и SMS рассылок по клиентам </td>
+                                              <td class="text-right"> от 3 000 руб. </td>
+                                            </tr>
+                                            <tr class="">
+                                              <td>
+                                                <input class="price-item" type="checkbox" value="35" data-id="35" data-price="3000">
+                                              </td>
+                                              <td colspan="2"> Настройка автоматических обзвонов </td>
+                                              <td class="text-right"> от 3 000 руб. </td>
+                                            </tr>
+                                            <tr class="">
+                                              <td>
+                                                <input class="price-item" type="checkbox" value="36" data-id="36" data-price="1000">
+                                              </td>
+                                              <td colspan="2"> Создание бизнес-процессов </td>
+                                              <td class="text-right"> от 1 000 руб. </td>
+                                            </tr>
+                                            <tr class="">
+                                              <td>
+                                                <input class="price-item" type="checkbox" value="37" data-id="37" data-price="5000">
+                                              </td>
+                                              <td colspan="2"> Сбор и обработка данных по рекламным компаниям в CRM </td>
+                                              <td class="text-right"> 5 000 руб. </td>
+                                            </tr>
+                                            <tr class="">
+                                              <td>
+                                                <input class="price-item" type="checkbox" value="38" data-id="38" data-price="1000">
+                                              </td>
+                                              <td colspan="2"> Настройка входящих и исходящих вебхуков </td>
+                                              <td class="text-right"> 1000 руб. </td>
+                                            </tr>
+                                            <tr class="">
+                                              <td>
+                                                <input class="price-item" type="checkbox" value="39" data-id="39" data-price="2500">
+                                              </td>
+                                              <td colspan="2"> Обучение и поддержка пользователей </td>
+                                              <td class="text-right"> 2 500 руб. </td>
+                                            </tr>
+                                            <tr class="">
+                                              <td>
+                                                <input class="price-item" type="checkbox" value="40" data-id="40" data-price="5000">
+                                              </td>
+                                              <td colspan="2"> Подключение ATC на базе Asterisk к Битрикс24 </td>
+                                              <td class="text-right"> от 5 000 руб. </td>
+                                            </tr>
+                                            <tr class="">
+                                              <td>
+                                                <input class="price-item" type="checkbox" value="41" data-id="41" data-price="25000">
+                                              </td>
+                                              <td colspan="2"> Сквозная аналитика. Анализ компаний и настройка модуля. <span class="text-success">Новинка!</span>
+                                              </td>
+                                              <td class="text-right"> от 25 000 руб. </td>
+                                            </tr>
+                                            <tr class="">
+                                              <td>
+                                                <input class="price-item" type="checkbox" value="41" data-id="41" data-price="25000"> </td>
+                                                <td colspan="2">
+                                                  <a href="/crm-dlya-oteley/">Hotel24 - Настройка CRM для Отелей</a>.
+                                                  <span class="text-success">Новинка!</span>
+                                                </td>
+                                                <td class="text-right"> от 25 000 руб. </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <table class="table total">
+                                            <tbody>
+                                              <tr>
+                                                <td>
+                                                  <div class="price bitrix24-rates-section__price">
+                                                    <span>19900</span> руб.
+                                                  </div>
+                                                  <!--<a href="#webform" class="btn btn-success btn-order" data-toggle="modal" data-target="#webform">Заказать настройку</a>-->
+                                                  <button class="btn js-open-modal" data-action="openModal" data-modal="bitrix24" data-tarif="Внедрение битрикс24 crm - отдел продаж"> Заказать настройку
+                                                  </button>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </section>
+                                </div>
+                                <div class="info-section info-section--bitrix24-stages">
+                                  <div class="container">
+                                    <div class="info-section-list__header row">
+                                      <div class="col-12">
+                                        <div class="title-base">
+                                          Этапы интеграции
+                                        </div>
+                                      </div>
+                                      <div class="col-12">
+                                        <div class="info-section-list__description"> Интеграция Битрикс24 состоит из двух основных этапов: настройки и автоматизации системы.
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="info-section__text col-lg-6 col-md-12">
+                                        <strong> Настройка системы </strong>
+                                        <p> На первом этапе осуществляется настройка CRM, подключение телефонии, эмейлов и сервиса обратного звонка. Наши специалисты проведут инструктаж сотрудников и научат пользоваться всем функционалом Битрикс24.
+                                        </p>
+                                        <p> Базовая настройка всегда начинается с регистрации нового аккаунта в Битрикс24. Далее мы приглашаем сотрудников CRM и создаем различные структуры компании.
+                                        </p>
+                                        <p> На следующем этапе оптимизируются карточки лида и контактов. После этого наши специалисты настраивают типовые фильтры, а также стадии лидов и сделок. Базовая настройка предусматривает подключение телефонного номера с функцией записи разговоров. Так же подключаются индивидуальные и общий корпоративный эмейл.
+                                        </p>
+                                        <p> После завершения всех необходимых работ специалисты LapkinLab проведут практикум для ваших сотрудников.
+                                        </p>
+                                      </div>
+                                      <div class="info-section__image col-lg-6 col-md-12">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/stages-big-1.png" class="js-tilt-block">
+                                      </div>
+                                    </div>
+                                    <div class="row info-section__item-not-first">
+                                      <div class="info-section__image col-lg-6 col-md-12">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/stages-big-2.png" class="js-tilt-block">
+                                      </div>
+                                      <div class="info-section__text col-lg-6 col-md-12"> <strong> Автоматизация системы </strong>
+                                        <p> На втором этапе выполняется интеграция и автоматизация сервиса. Наши специалисты подключат все необходимые коммуникационные каналы, настроят сервис повторных продаж и автоматизируют процедуру планирования. В обязанности интегратора Битрикс24 также входит:
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="row info-section-list__items">
+                                      <div class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="info-section-list-item">
+                                          <div class="info-section-list-item__image">
+                                            <img src="/local/templates/lapkinlab/images/bitrix24/stages-1.png">
+                                          </div>
+                                          <div class="info-section-list-item__content">
+                                            <div class="info-section-list-item__title"> Настройка форм для заполнения потенциальным клиентом
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="info-section-list-item">
+                                          <div class="info-section-list-item__image">
+                                            <img src="/local/templates/lapkinlab/images/bitrix24/stages-2.png">
+                                          </div>
+                                          <div class="info-section-list-item__content">
+                                            <div class="info-section-list-item__title"> Подключение социальных сетей </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="info-section-list-item">
+                                          <div class="info-section-list-item__image">
+                                            <img src="/local/templates/lapkinlab/images/bitrix24/stages-3.png">
+                                          </div>
+                                          <div class="info-section-list-item__content">
+                                            <div class="info-section-list-item__title"> Добавление новых контактов </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="info-section-list-item">
+                                          <div class="info-section-list-item__image">
+                                            <img src="/local/templates/lapkinlab/images/bitrix24/stages-4.png">
+                                          </div>
+                                          <div class="info-section-list-item__content">
+                                            <div class="info-section-list-item__title"> Настройка системы контроля лидов; автоматизация постановки задач и уведомлений
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="info-section-list-item">
+                                          <div class="info-section-list-item__image">
+                                            <img src="/local/templates/lapkinlab/images/bitrix24/stages-5.png">
+                                          </div>
+                                          <div class="info-section-list-item__content">
+                                            <div class="info-section-list-item__title"> Автоматизация процедуры создания новых сделок
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="info-section-list-item">
+                                          <div class="info-section-list-item__image">
+                                            <img src="/local/templates/lapkinlab/images/bitrix24/stages-6.png">
+                                          </div>
+                                          <div class="info-section-list-item__content">
+                                            <div class="info-section-list-item__title"> Настройка отчетов в соответствии с техническим заданием
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="info-section-list-item">
+                                          <div class="info-section-list-item__image">
+                                            <img src="/local/templates/lapkinlab/images/bitrix24/stages-7.png">
+                                          </div>
+                                          <div class="info-section-list-item__content">
+                                            <div class="info-section-list-item__title"> Демонстрация работы </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="info-section-list-item">
+                                          <div class="info-section-list-item__image">
+                                            <img src="/local/templates/lapkinlab/images/bitrix24/stages-8.png">
+                                          </div>
+                                          <div class="info-section-list-item__content">
+                                            <div class="info-section-list-item__title"> Практикум для сотрудников </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="info-section info-section--bitrix24-presentations">
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <div class="title-base"> Презентации </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="container">
+                                    <div class="row info-section-list__items">
+                                      <div class="col-md-6 col-sm-12">
+                                        <div class="bitrix24-presentation">
+                                          <div class="bitrix24-presentation__image">
+                                            <img src="/local/templates/lapkinlab/images/bitrix24/presentations-1.png">
+                                          </div>
+                                          <div class="bitrix24-presentation__content">
+                                            <noindex>
+                                              <a href="https://www.bitrix24.ru/features/?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__name"> CRM для продаж - Битрикс24.
+                                              </a>
+                                            </noindex>
+                                            <div class="bitrix24-presentation__description"> CRM помогает продавать больше: берет под контроль все каналы коммуникаций с клиентами, подсказывает, что делать и автоматизирует продажи.
+                                            </div>
+                                            <noindex>
+                                              <a href="https://www.bitrix24.ru/features/?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__more">
+                                                <span class="bitrix24-presentation__more-text">Подробнее</span>
+                                                <span class="bitrix24-presentation__more-circle">
+                                                  <img src="/local/templates/lapkinlab/images/bitrix24/arrow.svg">
+                                                </span>
+                                              </a>
+                                            </noindex>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6 col-sm-12">
+                                        <div class="bitrix24-presentation">
+                                          <div class="bitrix24-presentation__image">
+                                            <img src="/local/templates/lapkinlab/images/bitrix24/presentations-2.png">
+                                          </div>
+                                          <div class="bitrix24-presentation__content">
+                                            <noindex>
+                                              <a href="https://www.bitrix24.ru/features/tasks.php?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__name"> Задачи и проекты - Битрикс24. </a>
+                                            </noindex>
+                                            <div class="bitrix24-presentation__description"> Задачи и проекты помогают работать вместе и успевать вовремя. Если задача поставлена в Битрикс24, она будет выполнена.
+                                            </div>
+                                            <noindex>
+                                              <a href="https://www.bitrix24.ru/features/tasks.php?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__more">
+                                                <span class="bitrix24-presentation__more-text">Подробнее</span>
+                                                <span class="bitrix24-presentation__more-circle">
+                                                  <img src="/local/templates/lapkinlab/images/bitrix24/arrow.svg">
+                                                </span>
+                                              </a>
+                                            </noindex>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6 col-sm-12">
+                                        <div class="bitrix24-presentation">
+                                          <div class="bitrix24-presentation__image">
+                                            <img src="/local/templates/lapkinlab/images/bitrix24/presentations-3.png">
+                                          </div>
+                                          <div class="bitrix24-presentation__content">
+                                            <noindex>
+                                              <a href="https://www.bitrix24.ru/features/ol.php?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__name"> Открытые линии - Битрикс24.
+                                              </a>
+                                            </noindex>
+                                            <div class="bitrix24-presentation__description"> Открытые линии объединяют в CRM цифровые каналы коммуникаций с клиентами: чат на сайте, ВКонтакте, Facebook, Instagram, Telegram, Viber и другие.
+                                            </div>
+                                            <noindex>
+                                              <a href="https://www.bitrix24.ru/features/ol.php?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__more">
+                                                <span class="bitrix24-presentation__more-text">Подробнее</span>
+                                                <span class="bitrix24-presentation__more-circle">
+                                                  <img src="/local/templates/lapkinlab/images/bitrix24/arrow.svg">
+                                                </span>
+                                              </a>
+                                            </noindex>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6 col-sm-12">
+                                        <div class="bitrix24-presentation">
+                                          <div class="bitrix24-presentation__image">
+                                            <img src="/local/templates/lapkinlab/images/bitrix24/presentations-4.png">
+                                          </div>
+                                          <div class="bitrix24-presentation__content">
+                                            <noindex>
+                                              <a href="https://www.bitrix24.ru/features/company.php?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__name"> Компания - Битрикс24.
+                                              </a>
+                                            </noindex>
+                                            <div class="bitrix24-presentation__description"> Компания помогает работать вместе: чат, диск, календарь, группы, рабочие отчеты, бизнес-процессы и другие инструменты для совместной работы.
+                                            </div>
+                                            <noindex>
+                                              <a href="https://www.bitrix24.ru/features/company.php?p=8225437" target="_blank" rel="nofllow" class="bitrix24-presentation__more">
+                                                <span class="bitrix24-presentation__more-text">Подробнее</span>
+                                                <span class="bitrix24-presentation__more-circle">
+                                                  <img src="/local/templates/lapkinlab/images/bitrix24/arrow.svg">
+                                                </span>
+                                              </a>
+                                            </noindex>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="info-section info-section--bitrix24-result">
+                                  <div class="container">
+                                    <div class="info-section-list__header row">
+                                      <div class="col-12">
+                                        <div class="title-base"> Результат нашей работы </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="container container--narrow">
+                                    <div class="row">
+                                      <div class="info-section__image col-lg-6 col-md-12">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/result-big.png" class="js-tilt-block">
+                                      </div>
+                                      <div class="info-section__text col-lg-6 col-md-12">
+                                        <p> Итогом нашей работы будет подготовленный к полноценному функционированию сервис Битрикс24 с настроенной CRM, карточками компаний, сделок, контактов и т.д.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="container">
+                                    <div class="title-base title-base--small" style="max-width: 480px"> Наши клиенты уже после первого этапа работ получат:
+                                    </div>
+                                    <div class="row info-section-list__items">
+                                      <div class="col-lg-4 col-md-6 col-sm-12"> 
+                                      <div class="info-section-list-item"> 
+                                      <div class="info-section-list-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/result-1.png">
+                                      </div>
+                                      <div class="info-section-list-item__content">
+                                        <div class="info-section-list-item__title"> Фиксируемая связь с сохранением записей телефонных разговоров
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="info-section-list-item">
+                                      <div class="info-section-list-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/result-2.png">
+                                      </div>
+                                      <div class="info-section-list-item__content">
+                                        <div class="info-section-list-item__title"> Общий и личные корпоративные электронные адреса
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="info-section-list-item">
+                                      <div class="info-section-list-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/result-3.png">
+                                      </div>
+                                      <div class="info-section-list-item__content">
+                                        <div class="info-section-list-item__title"> Сервис обратного звонка </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="info-section-list-item">
+                                      <div class="info-section-list-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/result-4.png">
+                                      </div>
+                                      <div class="info-section-list-item__content">
+                                        <div class="info-section-list-item__title"> Постоянно обновляемая база данных клиентов </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="info-section-list-item">
+                                      <div class="info-section-list-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/result-5.png">
+                                      </div>
+                                      <div class="info-section-list-item__content">
+                                        <div class="info-section-list-item__title"> Возможность мониторинга ключевых параметров CRM
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="info-section-list-item">
+                                      <div class="info-section-list-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/result-6.png">
+                                      </div>
+                                      <div class="info-section-list-item__content">
+                                        <div class="info-section-list-item__title"> Возможность контроля сроков обработки лидов
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="title-base title-base--small" style="max-width: 540px"> Результатом второго этапа является:
+                                </div>
+                                <div class="row info-section-list__items info-section-list__items--two">
+                                  <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="info-section-list-item">
+                                      <div class="info-section-list-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/result-two-1.png">
+                                      </div>
+                                      <div class="info-section-list-item__content">
+                                        <div class="info-section-list-item__title"> Настройка индивидуальных прав доступа к CRM</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="info-section-list-item">
+                                      <div class="info-section-list-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/result-two-2.png">
+                                      </div>
+                                      <div class="info-section-list-item__content">
+                                        <div class="info-section-list-item__title"> Подключение формы обратной связи </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="info-section-list-item">
+                                      <div class="info-section-list-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/result-two-3.png">
+                                      </div>
+                                      <div class="info-section-list-item__content">
+                                        <div class="info-section-list-item__title"> Интеграция сообщений в соцсетях и мессенджерах
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <div class="info-section-list-item">
+                                      <div class="info-section-list-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/result-two-4.png">
+                                      </div>
+                                      <div class="info-section-list-item__content">
+                                        <div class="info-section-list-item__title">
+                                          Автоматизация планирования встреч, звонков и напоминаний
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container container--narrow">
+                                <div class="row">
+                                  <div class="info-section__text col-lg-6 col-md-12">
+                                    <p> Специалисты LapkinLab также составляют 2 персонализированных отчета на основании данных CRM и организуют обучение сотрудников (по предварительной договоренности).
+                                    </p>
+                                  </div>
+                                  <div class="info-section__image col-lg-6 col-md-12">
+                                    <img src="/local/templates/lapkinlab/images/bitrix24/result-two-big.png" class="js-tilt-block">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="info-section info-section--bitrix24-timing">
+                              <div class="container">
+                                <div class="info-section-list__header row">
+                                  <div class="col-12">
+                                    <div class="title-base"> Сроки внедрения </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="info-section__image col-lg-6 col-md-12">
+                                    <img src="/local/templates/lapkinlab/images/bitrix24/timing-1.png" class="js-tilt-block">
+                                  </div>
+                                  <div class="info-section__text col-lg-6 col-md-12">
+                                    <p> На сроки влияет скорость нашего взаимодействия с заказчиком. Чем разрозненней информация, которую мы будем получать, тем сложнее и, соответственно, дольше длится процесс интеграции. Если намудастся наладить взаимодействие с заказчиком, внедрение Битрикс24 пройдет намного быстрее. В любом случае на реализацию одного этапа у нас уходит не больше 10 рабочих дней.
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="row info-section__item-not-first">
+                                  <div class="info-section__text col-lg-6 col-md-12">
+                                    <p> Итогом двух этапов интеграции является готовый к работе корпоративный портал, который соответствует ожиданиям и целям заказчика. Битрикс24 позволит вам существенно повысить эффективность своего бизнеса!
+                                    </p>
+                                    <p> А специалисты LapkinLab помогут реализовать ваши идеи, которые обязательно возникнут во время работы с этим сервисом. Сотрудники нашей компании проконсультируют по любым вопросам, которые касаются функционирования вашей системы автоматизации.
+                                    </p>
+                                    <p> Поэтому не упустите шанс воспользоваться пакетами сопровождения, и повысить эффективность использования своего корпоративного портала.
+                                    </p>
+                                  </div>
+                                  <div class="info-section__image col-lg-6 col-md-12">
+                                    <img src="/local/templates/lapkinlab/images/bitrix24/timing-2.png" class="js-tilt-block">
+                                  </div>
+                                </div>
+                                <div class="row info-section__item-not-first">
+                                  <div class="info-section__image col-lg-6 col-md-12">
+                                    <img src="/local/templates/lapkinlab/images/bitrix24/timing-3.png" class="js-tilt-block">
+                                  </div>
+                                    <div class="info-section__text col-lg-6 col-md-12">
+                                      <p> Наша компания также оказывает услуги индивидуальной настройки Битрикс24. Опыта и навыков специалистов LapkinLab достаточно для реализации даже неординарных идей! Поэтому оставляйте заявки на нашем сайте или прямо сейчас звоните по указанным номерам телефона! </p>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="info-section info-section--bitrix24-certificates">
+                              <div class="container">
+                                <div class="info-section-list__header row">
+                                  <div class="col-12">
+                                    <div class="title-base">
+                                      <h3 class="seo-title">Наши компетенции в Битрикс24:</h3>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="row info-section-list__items">
+                                  <div class="col-md-6 col-sm-12">
+                                    <div class="certificate-item">
+                                      <div class="certificate-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/certificates/1.png" alt="Сертификат - Сквозная Аналитика Битрикс24">
+                                      </div>
+                                      <div class="info-section-list-item__title"> Сквозная Аналитика Битрикс24
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6 col-sm-12">
+                                    <div class="certificate-item">
+                                      <div class="certificate-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/certificates/2.png" alt="Сертификат «Курс для партнеров Битрикс24 - продажи и внедрение»">
+                                      </div>
+                                      <div class="info-section-list-item__title"> Курс для партнеров Битрикс24 - продажи и внедрение
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6 col-sm-12">
+                                    <div class="certificate-item">
+                                      <div class="certificate-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/certificates/3.png" alt="Сертификат «Курс менеджеров по продажам Битрикс24»">
+                                      </div>
+                                      <div class="info-section-list-item__title"> Курс менеджеров по продажам Битрикс24</div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6 col-sm-12">
+                                    <div class="certificate-item">
+                                      <div class="certificate-item__image">
+                                        <img src="/local/templates/lapkinlab/images/bitrix24/certificates/4.png" alt="Сертификат - CRM-Маркетинг в Битрикс24">
+                                      </div>
+                                      <div class="info-section-list-item__title"> CRM-Маркетинг в Битрикс24 </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="info-section" style="margin-top: 0;">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col-12">
+                                    <div class="title-base"> Что делать после внедрения? </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="row">
+                                  <div class="info-section__text offset-md-2 col-md-8">
+                                    <p> После завершения второго этапа заказчик получает готовый к работе корпоративный сайт, учитывающий все цели и нужды компании. Если же у заказчика возникнут проблемы с использованием сайта или новые идеи, требующие изменения настроек в Битрикс24, он может воспользоваться услугой сопровождения. Эта услуга позволит использовать корпоративный сайт по максимуму.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="section--lapkin-form lapkin-form">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="lapkin-form--wrapper col-xl-10 offset-xl-1 col-sm-12 offset-sm-0"> <!--contact-form-r79wr71ky23tyt8ikftqzo2sg1avz8zg-->
+                                    <form class="lapkin-form--form" id="contact-form-r79wr71ky23tyt8ikftqzo2sg1avz8zg"> <input type="hidden" name="sessid" id="sessid_1" value="0ca8c2d10e573f7619f3b9bb194b1933" />
+                                      <input type="hidden" name="id" value="contact">
+                                      <input type="hidden" name="required" value="bmFtZSxwaG9uZQ==">
+                                      <input type="hidden" name="url" value="https://lapkinlab.ru/bitrix24/">
+                                      <h2 class="lapkin-form--title text-center">Остались вопросы? Напишите нам!</h2>
+                                      <div class="lapkin-form--fields">
+                                        <div class="form-field form-field-text">
+                                          <label for="contact-form-name"></label>
+                                          <input id="contact-form-name" type="text" name="name" placeholder="Ваше имя *" required >
+                                        </div>
+                                        <div class="form-field form-field-text">
+                                          <label for="contact-form-phone"></label>
+                                          <input id="contact-form-phone" type="tel" name="phone" placeholder="Телефон *" required >
+                                        </div>
+                                        <div class="form-field form-field-text">
+                                          <label for="contact-form-email"></label>
+                                          <input id="contact-form-email" type="text" name="email" placeholder="Почта" >
+                                        </div>
+                                        <div class="form-field form-field-textarea" >
+                                          <label for="contact-form-message"></label>
+                                          <textarea id="contact-form-message" name="message" placeholder="Напишите ваш вопрос для наших специалистов" >
+                                          </textarea>
+                                        </div>
+                                      </div>
+                                      <div class="lapkin-form--privacy">
+                                        <p>Нажимая на кнопку «Отправить», я&nbsp;даю согласие на 
+                                          <!--noindex-->
+                                          <a class="privacy-policy" href="/privacy-policy/" rel="nofollow">обработку персональных данных</a>
+                                          <!--/noindex-->
+                                        </p>
+                                      </div>
+                                      <div class="lapkin-form--actions">
+                                        <div class="form-action">
+                                          <button class="button js-send-form" type="submit" data-metrika-target="">Отправить
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </main>
+                        <!--/main-->
+                        <!--footer-->
+                        <footer id="footer" class="footer">
+                          <!--footer map-->
+                          <div class="footer--map">
+                            <div class="footer--map--title">
+                              <i class="lapicon lapicon-location-white "></i> LapkinLab на карте
+                            </div>
+                            <div class="footer--map--wrapper" id="js-map-wrapper"></div>
+                          </div>
+                          <!--footer navigation-->
+                          <div class="footer--nav">
+                            <div class="container">
+                              <div class="row">
+                                <div class="footer--nav-wrapper col-12">
+                                  <div class="footer--nav-top">
+                                    <div class="footer--nav-top--menu">
+                                      <div class="footer--menu-item">
+                                        <div class="footer--menu-item--title">Услуги</div>
+                                        <ul class="footer--menu-item--list">
+                                          <li><a href="/">Seo продвижение</a></li>
+                                          <li><a href="/seo/">Seo аудит</a></li>
+                                          <li><a href="/sites/">Создание сайтов</a></li>
+                                          <li><a href="/ppc/">Контекстная реклама</a></li>
+                                          <li><a href="/smm/">SMM продвижение</a></li>
+                                          <li><a href="/chat-bot/">Чат боты</a></li>
+                                          <li><a href="/bitrix24/">Внедрение Битрикс24</a></li>
+                                        </ul>
+                                      </div>
+                                      <div class="footer--menu-item">
+                                        <div class="footer--menu-item--title">Компания</div>
+                                        <ul class="footer--menu-item--list">
+                                          <li><a href="/sites/#portfolio">Портфолио</a></li>
+                                          <li><a href="/#reviews">Отзывы</a></li>
+                                          <li><a href="/vacancy/">Вакансии</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="footer--nav-top--contacts">
+                                      <div class="footer--nav-top--contacts--phone">
+                                        <a href="tel:88003010019" class="roistat_phone">
+                                          <i class="lapicon lapicon-call-white "></i>8&nbsp;800&nbsp;301-00-19</a> <br>
+                                          <a href="tel:88612139779" class="roistat_phone"> <i class="lapicon lapicon-call-white "></i>8&nbsp;861&nbsp;213-97-79 </a> <br> <a href="#" class="js-open-modal" data-action="openModal" data-modal="callback">Заказать звонок
+                                          </a>
+                                        </div>
+                                        <div class="footer--nav-top--contacts--email">
+                                          <a href="/cdn-cgi/l/email-protection#e18c80888da18d80918a888f8d8083cf9394">
+                                            <span class="__cf_email__" data-cfemail="cca1ada5a08ca0adbca7a5a2a0adaee2beb9">[email&#160;protected]</span></a> <br> <a href="#" class="js-open-modal" data-action="openModal" data-modal="audit">Быстро отвечаем
+                                            </a>
+                                          </div>
+                                          <div class="footer--nav-top--contacts--address">
+                                            <p> <i class="lapicon lapicon-location-white "></i>г. Краснодар, ул. Восточно-Кругликовская, 28/1 <br><span></span>
+                                            </p>
+                                            <p class="social"><span>Мы в соцсетях:</span>
+                                            </p>
+                                            <p> <noindex> <a href=" https://tele.click/LapkinLAb_Agency_bot" rel="nofollow" target="_blank" title="Telegram Bot"><i class="lapicon lapicon-icon-circle-telegram "></i></a> </noindex> <a href="https://www.instagram.com/lapkin___lab/" rel="nofollow" target="_blank" title="Instagram"><i class="lapicon lapicon-icon-circle-instagram "></i></a> <a href="https://vk.com/lapkinlab" rel="nofollow" target="_blank" title="Вконтакте"><i class="lapicon lapicon-icon-circle-vk "></i></a> <a href="https://www.facebook.com/lapppkin" rel="nofollow" target="_blank" title="Facebook"><i class="lapicon lapicon-icon-circle-facebook "></i></a>
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="footer--nav-bottom">
+                                        <div class="footer--nav-bottom--copyrights">
+                                          <p>© 2015–2021 Все права защищены. </p>
+                                          <p>
+                                            <!--noindex-->
+                                            <a class="privacy-policy" href="/privacy-policy/" rel="nofollow">Политика в отношении обработки персональных данных</a>
+                                            <!--/noindex-->
+                                          </p>
+                                        </div>
+                                        <div class="footer--nav-bottom--partners">
+                                          <p>
+                                            <a href="/documents/Sertifikat_Biznes_Partnera_1C_Bitrix.pdf" title="Бизнес-партнер 1С-Битрикс" target="_blank">
+                                              <img src="/local/templates/lapkinlab/images/bitrix-partner.png" alt="Бизнес-партнер 1С-Битрикс">
+                                            </a>
+                                            <a class="fancybox" data-fancybox href="/local/templates/lapkinlab/images/amocrm.jpg" title="Партнер amoCRM">
+                                              <img class="fancybox" src="/local/templates/lapkinlab/images/amocrm-partner.jpg" alt="Партнер amoCRM">
+                                            </a>
+                                            <a href="/documents/b24-business.pdf" title="Бизнес партнёр Битрикс24" target="_blank">
+                                              <img src="/local/templates/lapkinlab/images/b24_business.png" alt="Бизнес партнёр Битрикс24">
+                                            </a>
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </footer>
+                            <!--/footer-->
+                            <button class="bubbly-button anti-crisis-offer-btn spinner-open js-open-modal" id="bubbly-button" data-action="openModal" data-modal="spinner">Получи подарок</button>
+                            <!--scroll to top-->
+                            <div class="hidden-xs" id="scroll-to-top"><a href="#top" title="наверх" rel="nofollow">↑</a></div>
+                          </div>
+                          <!--/#top-->
+                          <!--modals container-->
+                          <div id="ajax-modals-container">
+
+                          </div>
+                          <!-- Yandex.Metrika counter -->
+                          <noscript><div>
+                            <img src="https://mc.yandex.ru/watch/35838290" style="position:absolute; left:-9999px;" alt=""/>
+                          </div>
+                          </noscript>
+                          <!-- /Yandex.Metrika counter -->
+                          <!-- Global site tag (gtag.js) - Google Analytics -->
+                          <noscript> <img src="https://vk.com/rtrg?p=VK-RTRG-496312-5sBKY" style="position:fixed; left:-999px;" alt=""/>
+                          </noscript>
+                          <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+                          </script>
+                          <script> (function(w,d,u){ var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0); var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h); })(window,document,'https://cdn-ru.bitrix24.ru/b13928230/crm/tag/call.tracker.js');
+                          </script>
+                          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                          <script> document.addEventListener("DOMContentLoaded", function() { setTimeout(function () { console.log('test Map'); var script = document.createElement('script'); script.type = 'text/javascript'; script.src = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9db1ca34d2a512282ed1bb1bb9c3f832668118c6698848e261f87c33c8d85d9f&amp;width=100%&amp;height=450&amp;lang=ru_RU&amp;scroll=true'; document.getElementById('js-map-wrapper').appendChild(script); }, 3000) });
+                          </script>
+                          <script type="text/javascript" src="/bitrix/cache/js/s1/lapkinlab/template_5fc5165390b54f6e9199f33a8b77a029/template_5fc5165390b54f6e9199f33a8b77a029_v1.js?1606415623387464">
+                          </script>
+                          <script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "7cd4ae288888ec469eb2a74c89a93186"]); _ba.push(["host", "lapkinlab.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();
+                          </script>
+                          <script src="/local/templates/lapkinlab/js/new-design-home.js?ver=1.0">
+                          </script>
+                          <script type="text/javascript"> (function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(35838290, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true, trackHash: true });
+                          </script>
+                          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71801643-6">
+                          </script>
+                          <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-71801643-6');
+                          </script>
+                          <script> $(function() { $(document).on('submit', function() { fbq('track', 'Lead'); }); });</script>
+                          <script> (function (w, d, u) { var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0); var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h); })(window, document, 'https://cdn-ru.bitrix24.ru/b13928230/crm/tag/call.tracker.js');</script>
+                          <script> (function (w, d, u) { var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0); var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h); })(window, document, 'https://cdn-ru.bitrix24.ru/b13928230/crm/site_button/loader_2_p3ses0.js');</script>
+                          <script> function ymReachGoal(target) { console.log(target); ym(35838290, 'reachGoal', target); }</script>
+                          <script type="text/javascript">!function () { var t = document.createElement("script"); t.type = "text/javascript", t.async = !0, t.src = "https://vk.com/js/api/openapi.js?168", t.onload = function () { VK.Retargeting.Init("VK-RTRG-496312-5sBKY"), VK.Retargeting.Hit() }, document.head.appendChild(t) }();
+                          </script>
+                          <script> function setCookie(name, value, options = {}) { options = { path: '/', }; if (options.expires instanceof Date) { options.expires = options.expires.toUTCString(); } let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value); for (let optionKey in options) { updatedCookie += "; " + optionKey; let optionValue = options[optionKey]; if (optionValue !== true) { updatedCookie += "=" + optionValue; } } document.cookie = updatedCookie; } function getCookie(name) { let matches = document.cookie.match(new RegExp( "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)" )); return matches ? decodeURIComponent(matches[1]) : undefined; }
+                          </script>
+                          <script> window.onload = function () { var YMtargets = { index: { slider: { el: '.slider .js-open-modal', name: 'Push1' }, slider_brief: { el: '.slider a', name: 'click_brief' }, cases: { el: '.info-section-list--cases .js-open-modal', name: 'service_show_form' }, cases_form: { el: '.modal-identify_problems .js-send-form', name: 'zakazat' }, cases_button: { el: '.section--cases .js-open-modal', name: 'service_show_form' }, cases_form: { el: '.modal-audit .js-send-form', name: 'zakazat_usl' }, brief: { el: '.section--love--abilities-hello a.btn', name: 'click_brief' }, bottom_form: { el: '.section--lapkin-form .js-send-form', name: 'otpravka' } }, seo: {}, complex: {}, ppc: { slider: { el: '.slider .js-send-form', name: 'strategy' }, tarifs_button: { el: '.ppc-price .js-open-modal', name: 'reklama' }, tarifs_form: { el: '.modal-ppc .js-send-form', name: 'zakazrekl' }, bottom_form: { el: '.section--lapkin-form .js-send-form', name: 'otpravkakont' } }, smm: {}, sites: { slider: { el: '.slider .js-send-form', name: 'razrabotka' }, calculator: { el: '.calculator-form--form .js-send-form', name: 'bill' }, }, chat_bot: {}, amocrm: {}, blog: {}, contacts: {}, all: { callback_button: { el: '.header--top-buttons--callback .js-open-modal', name: 'call_back_show_form' }, callback_form: { el: '.modal-callback .js-send-form', name: 'call_back_send_form' }, audit_button: { el: '.header--top-buttons--audit .js-open-modal', name: 'audit_show_form' }, audit_form: { el: '.modal-audit .js-send-form', name: 'audit_send_form' }, brief_button: { el: '.header--top-buttons--brief a.btn', name: 'click_brief' } } }; var pageName = document.getElementsByTagName('body').item(0).className; console.log(pageName); /* цели для страниц */ for (var page in YMtargets) { if (Object.keys(YMtargets[page]).length !== 0 && pageName === page) { for (var tg in YMtargets[page]) { if (YMtargets[page][tg].el !== '') { $(YMtargets[page][tg].el).attr('data-metrika-target', YMtargets[page][tg].name); } } } } /* общие цели */ for (var tg in YMtargets.all) { if (YMtargets.all[tg].el !== '') { $(YMtargets.all[tg].el).attr('data-metrika-target', YMtargets.all[tg].name); } } $(document).on('click', '.js-send-ym', function () { var target = $(this).data('metrika-target'); if (target) ymReachGoal(target); }) };</script>
+                        <script type="application/javascript"> var calculator = $(".calculator"); calculator.on('click', '.tariff', function () { $(".tariff").removeClass("active"); $(this).addClass("active"); var tariff = $(this).data("id"), totalPrice = 0; $(".price-item").prop("checked", false); if (tariff == "start") { var itemArray = [1, 2, 3, 4, 5, 6, 7, 8, 12, 13, 14, 15, 16, 17, 18, 19]; $.each(itemArray, function (index, value) { var priceItem = $('[data-id="' + value + '"]'); priceItem.prop("checked", true); totalPrice += priceItem.data('price'); }); $(".price span").html(totalPrice); } else if (tariff == "automation") { var itemArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]; $.each(itemArray, function (index, value) { var priceItem = $('[data-id="' + value + '"]'); priceItem.prop("checked", true); totalPrice += priceItem.data('price'); }); $(".price span").html(totalPrice); } else if (tariff == "maximum") { var itemArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 39]; $.each(itemArray, function (index, value) { var priceItem = $('[data-id="' + value + '"]'); priceItem.prop("checked", true); totalPrice += priceItem.data('price'); }); $(".price span").html(totalPrice); } }); calculator.on('change', '.price-item', function () { var selectedItems = $(".price-item:checked"), totalPrice = 0; $.each(selectedItems, function (index, item) { var priceItem = $(this).data('price'); totalPrice += priceItem; }); $(".price span").html(totalPrice); });
+                        </script>
+                        </body>
+                        </html>

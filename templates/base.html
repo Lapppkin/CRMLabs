@@ -1,0 +1,383 @@
+{% load static %}
+<html lang="ru">
+    <!--head-->
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}Главная страница{% endblock %}</title>
+        <meta name="description" content="{% block description %}Мета-описание главной страницы{% endblock %}">
+        <!--meta-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--styles--> <!--favicons-->
+        <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon-96x96.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'img/site.webmanifest' %}">
+        <link rel="mask-icon" href="{% static 'img/safari-pinned-tab.svg' %}" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#b91d47"> <meta name="theme-color" content="#ffffff">
+        <link href="{% static 'css/style.css' %}" type="text/css" data-template-style="true" rel="stylesheet">
+        <link rel="canonical" href="https://crmlabs.ru/">
+        <style data-jss="" data-meta="MuiModal">
+            .MuiModal-root-22 {
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              z-index: 1300;
+              position: fixed;
+            }
+            .MuiModal-hidden-23 {
+              visibility: hidden;
+            }
+        </style>
+        <style data-jss="" data-meta="MuiDialog">
+            .MuiDialog-scrollPaper-11 {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .MuiDialog-scrollBody-12 {
+              overflow-y: auto;
+              overflow-x: hidden;
+            }
+            .MuiDialog-paper-13 {
+              margin: 48px;
+              display: flex;
+              outline: none;
+              position: relative;
+              overflow-y: auto;
+              flex-direction: column;
+            }
+            .MuiDialog-paperScrollPaper-14 {
+              flex: 0 1 auto;
+              max-height: calc(100% - 96px);
+            }
+            .MuiDialog-paperScrollBody-15 {
+              margin: 48px auto;
+            }
+            .MuiDialog-paperWidthXs-16 {
+              max-width: 360px;
+            }
+            @media (max-width:455.95px) {
+              .MuiDialog-paperWidthXs-16.MuiDialog-paperScrollBody-15 {
+                margin: 48px;
+              }
+            }
+            .MuiDialog-paperWidthSm-17 {
+              max-width: 600px;
+            }
+            @media (max-width:695.95px) {
+              .MuiDialog-paperWidthSm-17.MuiDialog-paperScrollBody-15 {
+                margin: 48px;
+              }
+            }
+            .MuiDialog-paperWidthMd-18 {
+              max-width: 960px;
+            }
+            @media (max-width:1055.95px) {
+              .MuiDialog-paperWidthMd-18.MuiDialog-paperScrollBody-15 {
+                margin: 48px;
+              }
+            }
+            .MuiDialog-paperWidthLg-19 {
+              max-width: 1280px;
+            }
+            @media (max-width:1375.95px) {
+              .MuiDialog-paperWidthLg-19.MuiDialog-paperScrollBody-15 {
+                margin: 48px;
+              }
+            }
+            .MuiDialog-paperFullWidth-20 {
+              width: 100%;
+            }
+            .MuiDialog-paperFullScreen-21 {
+              width: 100%;
+              margin: 0;
+              height: 100%;
+              max-width: 100%;
+              max-height: none;
+              border-radius: 0;
+            }
+            .MuiDialog-paperFullScreen-21.MuiDialog-paperScrollBody-15 {
+              margin: 0;
+            }
+        </style>
+        <style data-jss="" data-meta="Connect(FeedBack)">
+            .Connect-FeedBack--summary-1 {
+              text-align: left;
+            }
+            .Connect-FeedBack--comment-2 {
+              margin-bottom: 1.4rem;
+            }
+            .Connect-FeedBack--container-3 {
+              margin-bottom: 1rem;
+            }
+            .Connect-FeedBack--formControl-4 {
+              margin: 8px;
+              min-width: 160px;
+              margin-left: 0;
+            }
+            .Connect-FeedBack--tag-5 {
+              margin-bottom: 8px;
+            }
+            .Connect-FeedBack--tag_default-6 {
+              color: #fff;
+              background-color: #2196f3;
+            }
+            .Connect-FeedBack--tag_fail-7 {
+              color: #fff;
+              background-color: #f44336;
+            }
+            .Connect-FeedBack--tag_success-8 {
+              color: #fff;
+              background-color: #4caf50;
+            }
+            .Connect-FeedBack--tag_selected-9 {
+              background-color: #9e9e9e;
+            }
+        </style>
+    </head>
+    <!--/head-->
+    <!--body-->
+    <body class="amocrm" data-new-gr-c-s-check-loaded="14.1028.0" data-gr-ext-installed="" cz-shortcut-listen="true"> 
+        <div id="svg-container" hidden=""><svg xmlns="http://www.w3.org/2000/svg"></svg>
+        </div> 
+        <!--mobile menu-->
+        <div class="mobile-menu"> 
+            <i class="lapicon lapicon-logo-small "></i>
+            <div class="about">Внедрение и настройка CRM систем</div>
+            <button class="close btn-noradius js-mobile-menu--close" type="button">
+                <i class="lapicon lapicon-close "></i>
+            </button>
+            <div class="mobile-menu--wrapper">
+                <div class="mobile-menu--buttons">
+                    <div class="header--top-buttons--callback">
+                        <a class="btn btn-noradius" href='https://forms.amocrm.ru/mwzvlt'>
+                            <i class="lapicon lapicon-call-white "></i> Заказать звонок
+                        </a>
+                    </div>
+                        <div class="header--top-buttons--brief">
+                            <noindex> <a class="btn btn-noradius btn-darken" rel="nofollow" href="https://docs.google.com/forms/d/e/1FAIpQLSfTqL6tOA92Y3SRrYWDoJ7wWNHEr-DFMXv6YWUgaY6DhBRmkw/viewform" target="_blank" data-metrika-target="click_brief">Заполнить бриф</a> </noindex>
+                        </div>
+                </div>
+                    <!--main menu-->
+                    <ul class="nav">
+                        <li class="active"> <a class="active"> Внедрение CRM </a>
+                            <ul>
+                                <li class="active"> <a href="/amocrm/">amoCRM </a> </li>
+                                <li class=""> <a href="/bitrix24/">Битрикс24 </a> </li>
+                                <li class=""> <a href="/crm-dlya-oteley/">CRM для отелей </a> </li>
+                                <li class=""> <a href="/taskflow/">TaskFlow </a> </li>
+                            </ul>
+                        </li>
+                        <li class=""> <a href="/contacts/" class=""> Контакты </a> </li>
+                    </ul>
+            </div>
+        </div>
+        <!--/mobile menu-->
+            <div class="wrapper" id="top">
+                <!--header-->
+                <header id="header" class="header">
+                    <!--header topbar-->
+                    <div class="header--top">
+                        <div class="container">
+                            <div class="row">
+                                <div class="header--top-wrapper col-12">
+                                    <!--header LOGO-->
+                                    <div class="header--top-logo">
+                                        <a href="/" class="header--top-logo--base">
+                                            <img src="{% static 'img/logo_CRMlabs.png' %}" alt="LapkinLab"></a>
+                                        <a href="/" class="header--top-logo--small">
+                                            <img src="{% static 'img/amocrm/small-logo.png' %}" alt="LapkinLab"></a>
+                                    </div>
+                                    <!--/header LOGO-->
+                                    <div class="header--nav-menu">
+                                        <!--main menu-->
+                                        <ul class="nav">
+                                            <!-- <li class="active"> <a class="active"> Внедрение CRM </a> -->
+                                            <li> <a> Внедрение CRM </a>
+                                                <ul>
+                                                    <!-- <li class="active"><a href="/">amoCRM </a></li> -->
+                                                    <li><a href="/">amoCRM </a></li>
+                                                    <li class=""> <a href="/bitrix24/">Битрикс24 </a> </li>
+                                                    <li class=""> <a href="/crm-dlya-oteley/">CRM для отелей </a> </li>
+                                                    <li class=""> <a href="/taskflow/">TaskFlow </a> </li>
+                                                </ul>
+                                            </li>
+                                            <li class=""><a href="/contacts/" class=""> Контакты </a></li>
+                                        </ul>
+                                        <!--/main menu-->
+                                    </div>
+                                    <!--header phone-->
+                                    <div class="header--top-phones">
+                                        <i class="lapicon lapicon-call "></i>
+                                            <a class="roistat_phone" href="tel:{{phone1}}">
+                                            <!-- <span class="country">8</span>&nbsp;<span class="code">499</span>&nbsp;<span class="number">647-88-43</span> -->
+                                            {{phone1}}
+                                            </a>
+                                    </div>
+                                    <!--/header phone-->
+                                    <!--header hamburger-->
+                                    <div class="header--nav-hamburger js-mobile-menu">
+                                        <i class="lapicon lapicon-menu "></i>
+                                    </div>
+                                    <!--/header hamburger-->
+                                    <!--header buttons-->
+                                    <div class="header--top-buttons">
+                                        <div class="header--top-buttons--callback">
+                                            <a class="btn btn-noradius text-white" style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwzvlt'>
+                                                <i class="lapicon lapicon-call-white "></i> Заказать звонок </a>
+                                        </div>
+                                        <div class="header--top-buttons--brief">
+                                            <noindex> <a class="btn btn-noradius btn-darken js-send-ym" rel="nofollow" href="https://docs.google.com/forms/d/e/1FAIpQLSfTqL6tOA92Y3SRrYWDoJ7wWNHEr-DFMXv6YWUgaY6DhBRmkw/viewform" target="_blank" data-metrika-target="click_brief"> Заполнить бриф</a>
+                                            </noindex>
+                                        </div>
+                                    </div>
+                                    <!--/header buttons-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/header topbar-->
+                </header>
+                <!--/header--> 
+            </div>
+            <!--/#top-->
+{% block content %}
+
+{% endblock %}
+
+        <!--footer-->
+        <footer id="footer" class="footer">
+            <!--footer map-->
+            <div class="footer--map">
+                <div class="footer--map--title">
+                    <i class="lapicon lapicon-location-white "></i> 
+                    CRMLabs на карте
+                </div>
+                <div class="footer--map--wrapper" id="js-map-wrapper"></div>
+            </div>
+            <!--footer navigation-->
+            <div class="footer--nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer--nav-wrapper col-12">
+                            <div class="footer--nav-top">
+                                <div class="footer--nav-top--menu">
+                                    <div class="footer--menu-item">
+                                        <div class="footer--menu-item--title">
+                                            Услуги
+                                        </div>
+                                        <ul class="footer--menu-item--list">
+                                            <li><a href="/">Внедрение amoCRM</a></li>
+                                            <li><a href="/bitrix24/">Внедрение Битрикс24</a></li>
+                                            <li><a href="/crm-dlya-oteley/">CRM для отелей</a></li>
+                                            <li><a href="/taskflow/">TaskFlow</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer--nav-top--contacts">
+                                    <div class="footer--nav-top--contacts--phone">
+                                        <a href="tel:{{phone1}}" class="roistat_phone">
+                                            <i class="lapicon lapicon-call-white "></i>
+                                            {{phone1}}
+                                        </a>
+                                        <br>
+                                        <a style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwzvlt'>
+                                            Заказать звонок
+                                        </a>
+                                    </div>
+                                    <div class="footer--nav-top--contacts--email">
+                                        <a href="mailto:{{ email1 }}">{{ email1 }}</a>
+                                        <br>
+                                    </div>
+                                    <div class="footer--nav-top--contacts--address">
+                                        <p>
+                                            <i class="lapicon lapicon-location-white "></i>
+                                            {{ address_krd1 }} <br>
+                                            <span></span>
+                                            <i class="lapicon lapicon-location-white "></i>
+                                            {{ address_msk1 }} <br>
+                                        </p> 
+                                        <!-- <p class="social">
+                                            <span>Мы в соцсетях:</span>
+                                        </p>
+                                        <p> 
+                                            <noindex>
+                                                <a href=" https://t.me/crmspecialistbot" rel="nofollow" target="_blank" title="Telegram Bot">
+                                                    <i class="lapicon lapicon-icon-circle-telegram "></i>
+                                                </a>
+                                            </noindex>
+                                            <a href="https://www.instagram.com/lapkin___lab/" rel="nofollow" target="_blank" title="Instagram">
+                                                <i class="lapicon lapicon-icon-circle-instagram "></i>
+                                            </a>
+                                            <a href="https://vk.com/lapkinlab" rel="nofollow" target="_blank" title="Вконтакте">
+                                                <i class="lapicon lapicon-icon-circle-vk "></i>
+                                            </a>
+                                            <a href="https://www.facebook.com/lapppkin" rel="nofollow" target="_blank" title="Facebook">
+                                                <i class="lapicon lapicon-icon-circle-facebook "></i>
+                                            </a>
+                                        </p> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer--nav-bottom">
+                                <div class="footer--nav-bottom--copyrights">
+                                    <p>
+                                        © 2015–{{ now }} Все права защищены.
+                                        <style>.heart{color:#e25555;}</style> 
+                                            Made with <span class="heart">♥</span> in  
+                                            <a class="text-white" href="https://lapkinlab.ru/">
+                                            <img src="{% static 'img/logo_CRMlabs_ white.png' %}" height="90" class="d-inline-block align-text-top me-4" alt="" loading="lazy" style="margin-top: -40px;"></a>
+                                    </p>
+                                    <p>
+                                        <!--noindex-->
+                                        <a class="privacy-policy" href="/privacy-policy/" rel="nofollow">Политика в отношении обработки персональных данных</a>
+                                        <!--/noindex-->
+                                    </p>
+                                </div>
+                                <div class="footer--nav-bottom--partners">
+                                    <p>
+                                        <a href="{% static 'img/Sertifikat_Biznes_Partnera_1C_Bitrix.pdf' %}" title="Бизнес-партнер 1С-Битрикс" target="_blank">
+                                            <img src="{% static 'img/bitrix-partner.png' %}" alt="Бизнес-партнер 1С-Битрикс">
+                                        </a>
+                                        <a class="fancybox" data-fancybox="" href="{% static 'img/amocrm.jpeg' %}" title="Партнер amoCRM">
+                                            <img class="fancybox" src="{% static 'img/amocrm.jpeg' %}" alt="Партнер amoCRM">
+                                        </a>
+                                        <a href="{% static 'img/b24-business.pdf' %}" title="Бизнес партнёр Битрикс24" target="_blank">
+                                            <img src="{% static 'img/b24_business.png' %}" alt="Бизнес партнёр Битрикс24">
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--/footer-->
+        <!--scroll to top-->
+        <div class="hidden-xs" id="scroll-to-top">
+            <a href="#top" title="наверх" rel="nofollow">↑</a>
+        </div>
+        <!--/scroll to top-->
+
+        <!--modals container-->
+        <div id="ajax-modals-container"></div>
+        <!-- Yandex.Metrika counter -->
+        <!-- /Yandex.Metrika counter -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script async src="{% static 'js/script.js' %}"></script>
+        <!-- <script async src="{% static 'js/jquery.min.js' %}"></script> -->
+        <script async src="{% static 'js/vendor.app.js' %}"></script>
+        <script async src="{% static 'js/new-design-home.js' %}"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+        <script> document.addEventListener("DOMContentLoaded", function() { setTimeout(function () { console.log('test Map'); var script = document.createElement('script'); script.type = 'text/javascript'; script.src = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9db1ca34d2a512282ed1bb1bb9c3f832668118c6698848e261f87c33c8d85d9f&amp;width=100%&amp;height=450&amp;lang=ru_RU&amp;scroll=true'; document.getElementById('js-map-wrapper').appendChild(script); }, 3000) });</script>
+        <script> window.onload = function () { var YMtargets = { index: { slider: { el: '.slider .js-open-modal', name: 'Push1' }, slider_brief: { el: '.slider a', name: 'click_brief' }, cases: { el: '.info-section-list--cases .js-open-modal', name: 'service_show_form' }, cases_form: { el: '.modal-identify_problems .js-send-form', name: 'zakazat' }, cases_button: { el: '.section--cases .js-open-modal', name: 'service_show_form' }, cases_form: { el: '.modal-audit .js-send-form', name: 'zakazat_usl' }, brief: { el: '.section--love--abilities-hello a.btn', name: 'click_brief' }, bottom_form: { el: '.section--lapkin-form .js-send-form', name: 'otpravka' } }, seo: {}, complex: {}, ppc: { slider: { el: '.slider .js-send-form', name: 'strategy' }, tarifs_button: { el: '.ppc-price .js-open-modal', name: 'reklama' }, tarifs_form: { el: '.modal-ppc .js-send-form', name: 'zakazrekl' }, bottom_form: { el: '.section--lapkin-form .js-send-form', name: 'otpravkakont' } }, smm: {}, sites: { slider: { el: '.slider .js-send-form', name: 'razrabotka' }, calculator: { el: '.calculator-form--form .js-send-form', name: 'bill' }, }, chat_bot: {}, amocrm: {}, blog: {}, contacts: {}, all: { callback_button: { el: '.header--top-buttons--callback .js-open-modal', name: 'call_back_show_form' }, callback_form: { el: '.modal-callback .js-send-form', name: 'call_back_send_form' }, audit_button: { el: '.header--top-buttons--audit .js-open-modal', name: 'audit_show_form' }, audit_form: { el: '.modal-audit .js-send-form', name: 'audit_send_form' }, brief_button: { el: '.header--top-buttons--brief a.btn', name: 'click_brief' } } }; var pageName = document.getElementsByTagName('body').item(0).className; console.log(pageName); /* цели для страниц */ for (var page in YMtargets) { if (Object.keys(YMtargets[page]).length !== 0 && pageName === page) { for (var tg in YMtargets[page]) { if (YMtargets[page][tg].el !== '') { $(YMtargets[page][tg].el).attr('data-metrika-target', YMtargets[page][tg].name); } } } } /* общие цели */ for (var tg in YMtargets.all) { if (YMtargets.all[tg].el !== '') { $(YMtargets.all[tg].el).attr('data-metrika-target', YMtargets.all[tg].name); } } $(document).on('click', '.js-send-ym', function () { var target = $(this).data('metrika-target'); if (target) ymReachGoal(target); }) };</script>
+        <script type="application/javascript"> var calculator = $(".calculator"); calculator.on('click', '.tariff', function () { $(".tariff").removeClass("active"); $(this).addClass("active"); var tariff = $(this).data("id"), totalPrice = 0; $(".price-item").prop("checked", false); if (tariff == "start") { var itemArray = [1, 2, 3, 4, 5, 6, 7, 8, 12, 13, 14, 15, 16, 17, 18, 19]; $.each(itemArray, function (index, value) { var priceItem = $('[data-id="' + value + '"]'); priceItem.prop("checked", true); totalPrice += priceItem.data('price'); }); $(".price span").html(totalPrice); } else if (tariff == "automation") { var itemArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]; $.each(itemArray, function (index, value) { var priceItem = $('[data-id="' + value + '"]'); priceItem.prop("checked", true); totalPrice += priceItem.data('price'); }); $(".price span").html(totalPrice); } else if (tariff == "maximum") { var itemArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 32, 39]; $.each(itemArray, function (index, value) { var priceItem = $('[data-id="' + value + '"]'); priceItem.prop("checked", true); totalPrice += priceItem.data('price'); }); $(".price span").html(totalPrice); } }); calculator.on('change', '.price-item', function () { var selectedItems = $(".price-item:checked"), totalPrice = 0; $.each(selectedItems, function (index, item) { var priceItem = $(this).data('price'); totalPrice += priceItem; }); $(".price span").html(totalPrice); });
+        </script>
+    </body>
+    <!--/body-->
+</html>

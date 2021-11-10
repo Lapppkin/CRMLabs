@@ -1,0 +1,1738 @@
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <title>{{ pageTitle }}</title>
+    <meta name="description" content="{% block description %}{% endblock %}">
+<!--main--> 
+<main id="main-content">
+    <!--breadcrumb-->
+    <nav aria-label="breadcrumb" class="breadcrumb--wrapper">
+        <div class="container">
+            <div class="row">
+                <ul class="breadcrumb col-12" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="/" title="Главная" itemprop="item"><span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <meta itemprop="position" content="2"><span itemprop="name">amoCRM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/breadcrumb--> 
+    <!--ПЕРВЫЙ ЭКРАН-->
+    <div class="page page-ppc newsmm amocrm-page">
+        {% for slide in amoCRMpage_Slider %}
+        <div class="ppc-slider">
+            <div class="ppc-slider-image " style="background: #DBF3FF"></div>
+            <div class="container">
+                
+                <div class="ppc-slider--wrapper row">
+                    <div class="ppc-slider--slides col-xl-6 offset-xl-1 col-lg-7 offset-lg-0 col-md-12 offset-md-0">
+                        
+                        <div class="slide slide-">
+                            <div class="slide-title d-flex">
+                                <span class="slide-title__text">
+                                    {{slide.bannerUpTitle}}
+                                </span>
+                                <span class="amosubtitle">
+                                    {{slide.bannerUpText}}
+                                </span>
+                                <button class="btn">
+                                    <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="slider--form col-xl-4 offset-xl-0 col-lg-5 offset-lg-0 col-md-12 offset-md-0">
+                        <!-- <img src="{% static 'img/amocrm/main-ban-amo.png' %}" alt=""> -->
+                        <img src="{{ slide.bannerUpImg.url }}" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        {% endfor %}
+        <!--/ПЕРВЫЙ ЭКРАН-->
+        <!--ВТОРОЙ ЭКРАН-->
+        <div class="info-section">
+            <div class="container">
+                {% for post in amoCRMpage_BasicTerms_list %}
+                <div class="row">
+                    <div class="info-section__text col-lg-6 col-md-12">
+                        <h2 class="lapkin-form--title font30">
+                            {{ post.basicTermsTitle }}
+                        </h2>
+                    </div>
+                    <div class="info-section__text col-lg-6 col-md-12">
+                        <div class="info-section-list-item__title">
+                            {{ post.basicTermsMiniTitle }}
+                        </div>
+                        <ul class="red-marked-list ">
+                            <li class="red-marked-list-item font16 font-bold">
+                                {{ post.basicTermsText1 }}
+                            </li>
+                            <li class="red-marked-list-item font16 font-bold">
+                                {{ post.basicTermsText2 }}
+                            </li>
+                            <li class="red-marked-list-item font16 font-bold">
+                                {{ post.basicTermsText3 }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!--/ВТОРОЙ ЭКРАН-->
+        <!--ТРЕТИЙ ЭКРАН-->
+        <div class="info-section info-section--sites-reasons">
+            {% for post in amoCRMpage_CrmTypes_list %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-base"> 
+                            {{ post.crmTypesTitle }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row info-section-list__items steps-wrapper">
+                    <div class="col-lg-5 col-md-6 col-sm-12 block-with-icon">
+                        <div class="square-icon">
+                            <img src="{% static 'img/amocrm/victim.svg' %}" alt="">
+                        </div>
+                        <div class="info-section-list-item steps">
+                            <div class="info-section-list-item__image">
+                                <div class="info-section-list-item__title">
+                                    {{ post.crmTypesLeftMiniTitle }}
+                                </div>
+                                <ul class="red-marked-list amotypes">
+                                    <li class="red-marked-list-item font16">
+                                        {{ post.crmTypesLeftText1 }}
+                                    </li>
+                                    <li class="red-marked-list-item font16">
+                                        {{ post.crmTypesLeftText2 }}
+                                    </li>
+                                    <li class="red-marked-list-item font16 amoitem">
+                                        {{ post.crmTypesLeftText3 }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12 block-with-icon">
+                        <div class="square-icon">
+                            <img src="{% static 'img/amocrm/cms1.svg' %}" alt="">
+                        </div>
+                        <div class="info-section-list-item steps">
+                            <div class="info-section-list-item__image">
+                                <div class="info-section-list-item__title">
+                                    {{ post.crmTypesRightMiniTitle }}
+                                </div>
+                                <ul class="red-marked-list amotypes">
+                                    <li class="red-marked-list-item font16">
+                                        {{ post.crmTypesRightText1 }}
+                                    </li>
+                                    <li class="red-marked-list-item font16 amoitem">
+                                        {{ post.crmTypesRightText2 }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!--/ТРЕТИЙ ЭКРАН-->
+        <!--ЧЕТВЕРТЫЙ ЭКРАН-->
+        <div class="info-section section-6">
+            {% for post in amoCRMpage_CrmAdvantages_list %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-base">
+                            {{ post.crmAdvantagesTitle }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row advantages">
+                    <div class="info-section__image col-lg-7 col-md-12 center-button">
+                        <img src="{{ post.crmAdvantagesImg.url }}" class="js-tilt-block">
+                        <button class="btn">
+                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                        </button>
+                    </div>
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text">
+                            <span class="circle-num">1</span>
+                                {{ post.crmAdvantagesTitle1 }}
+                        </p>
+                        <ul class="red-marked-list ">
+                            <li class="red-marked-list-item bold">{{ post.crmAdvantagesText1 }}</li>
+                            <li class="red-marked-list-item bold">{{ post.crmAdvantagesText2 }}
+                            </li>
+                            <li class="red-marked-list-item bold">{{ post.crmAdvantagesText3 }}</li>
+                            <li class="red-marked-list-item bold">{{ post.crmAdvantagesText4 }}</li>
+                            <li class="red-marked-list-item bold">{{ post.crmAdvantagesText5 }}</li>
+                            <li class="red-marked-list-item bold">{{ post.crmAdvantagesText6 }}</li>
+                            <li class="red-marked-list-item bold">{{ post.crmAdvantagesText7 }}</li>
+                        </ul>
+                        <p class="bold-text">
+                            <span class="circle-num">2</span> {{ post.crmAdvantagesTitle2 }}
+                        </p>
+                        <p class="bold-text">
+                                <span class="circle-num">3</span> {{ post.crmAdvantagesTitle3 }}
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two margin-top-9">
+                    <div class="info-section__text col-lg-4 col-md-12">
+                        <p class="bold-text font36">
+                            {{ post.crmAdvantagesTitleLeft }}
+                        </p>
+                        <p class="font18">
+                            {{ post.crmAdvantagesTextLeft }}
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-8 col-md-12">
+                        <img src="{{ post.crmAdvantagesImg2.url }}" class="js-tilt-block">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!--/ЧЕТВЕРТЫЙ ЭКРАН-->
+        <!--ПЯТЫЙ ЭКРАН-->
+        <div class="info-section section-6 greybg">
+            <div class="container">
+                <div class="row info-section__item-two">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36">
+                            Воронка продаж
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold">
+                            это последовательность этапов, которые будет проходить потенциальный клиент прежде, чем он у нас купит или откажется от покупки
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two margin-top-9 f-start">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <img src="{% static 'img/amocrm/Group225.png' %}" class="js-tilt-block">
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <ul class="red-marked-list ">
+                            <li class="red-marked-list-item bold">
+                                Упрощает процесс продажи:<br>
+                                <span class="item-subtext">на каждом этапе менеджер продаёт только<br>следующий этап воронки, а не весь продукт/услугу.
+                                </span>
+                            </li>
+                            <li class="red-marked-list-item bold">
+                                Помогает расставить приоритеты:<br>
+                                <span class="item-subtext">
+                                    больше ресурсов на правую часть воронки.
+                                </span>
+                            </li>
+                            <li class="red-marked-list-item bold">Точнее данные<br>
+                                <span class="item-subtext">
+                                    для контроля и прогноза результата (видим на каком<br>этапе находится каждый клиент)
+                                </span>
+                            </li>
+                            <li class="red-marked-list-item bold">
+                                Позволяет определять события<br>
+                                <span class="item-subtext">
+                                    (триггеры), по которым клиенты переходят из одного<br>
+                                    этапа в другой, и устанавливать оптимальное время<br>
+                                    нахождения клиента на каждом этапе воронки.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row info-section__item-two mt50 f-start">
+                    <div class="step-item">
+                        <div class="step-item-top">
+                            <div class="step-number">1</div>
+                            <div class="step-arrow">
+                                <img src="{% static 'img/amocrm/Arrow2.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="step-item-bottom"> Первый контакт </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-item-top">
+                            <div class="step-number">2</div>
+                            <div class="step-arrow">
+                                <img src="{% static 'img/amocrm/Arrow2.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="step-item-bottom"> Отправили КП </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-item-top">
+                            <div class="step-number">3</div>
+                            <div class="step-arrow">
+                                <img src="{% static 'img/amocrm/Arrow2.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="step-item-bottom"> Получена ОС </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-item-top">
+                            <div class="step-number">4</div>
+                            <div class="step-arrow">
+                                <img src="{% static 'img/amocrm/Arrow2.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="step-item-bottom"> Переговоры </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-item-top">
+                            <div class="step-number">5</div>
+                            <div class="step-arrow">
+                                <img src="{% static 'img/amocrm/Arrow2.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="step-item-bottom"> 
+                            Подписание<br>
+                            договора 
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-item-top">
+                            <div class="step-number">6</div>
+                        </div>
+                        <div class="step-item-bottom"> 
+                            Выставление<br>
+                            и оплата счета
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ПЯТЫЙ ЭКРАН-->
+        <div class="info-section section-6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-base"> 
+                            Воронка продаж amoCRM
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row advantages">
+                    <div class="info-section__text col-lg-4 col-md-12 padleft50">
+                        <p class="bold-text">
+                            <span class="circle-num">1</span>
+                            <span class="voronka-text font18">
+                                Настраивайте воронку продаж самостоятельно под свои задачи
+                            </span>
+                        </p>
+                        <p class="bold-text">
+                            <span class="circle-num">2</span>
+                            <span class="voronka-text font18">
+                                Добавляйте, называйте и меняйте местами этапы своей воронки
+                            </span>
+                        </p>
+                        <p class="bold-text">
+                            <span class="circle-num">3</span>
+                            <span class="voronka-text font18">
+                                Настраивайте автоматический переход от этапа к этапу или переносите клиентов на другой этап вручную
+                            </span>
+                        </p>
+                        <p class="bold-text">
+                            <span class="circle-num">4</span>
+                            <span class="voronka-text font18">
+                                Помечайте разными цветами каждый этап
+                            </span>
+                        </p>
+                        <button class="btn">
+                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                        </button>
+                    </div>
+                    <div class="info-section__image col-lg-8 col-md-12 center-button">
+                        <img src="{% static 'img/amocrm/Group226.png' %}" class="js-tilt-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-section section-6 greybg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-base">
+                            Настройка прав пользователей
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row advantages">
+                    <div class="info-section__text col-lg-4 col-md-12 padleft50">
+                        <p class="bold-text">
+                            <span class="circle-num">1</span>
+                            <span class="voronka-text font18">
+                                Настраивайте права пользователей<br>аккаунта (ваших коллег и сотрудников)<br>
+                                как индивидуально (на каждого<br>сотрудника), так и на группы (отделы) в<br>
+                                любых сочетаниях режимов видимости<br>
+                                и редактирования
+                            </span>
+                        </p>
+                        <p class="bold-text">
+                            <span class="circle-num">2</span>
+                            <span class="voronka-text font18">
+                                Если ваш сотрудник уволился, вы легко можете удалить его из системы
+                            </span>
+                        </p>
+                        <p class="bold-text">
+                            <span class="circle-num">3</span>
+                            <span class="voronka-text font18">
+                                При удалении amoCRM автоматически предложит Вам перенести всю информацию на другого менеджера
+                            </span>
+                        </p>
+                        <button class="btn">
+                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                        </button>
+                    </div>
+                    <div class="info-section__image col-lg-8 col-md-12 center-button">
+                        <img src="{% static 'img/amocrm/image61.png' %}" class="js-tilt-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-section section-6">
+            <div class="container">
+                <div class="row info-section__item-two marbot40">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36">
+                            Digital воронка
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold">
+                            amoCRM сама умеет утеплять заявки<br>
+                            и доводить их до покупки.
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two f-start">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <img src="{% static 'img/amocrm/HotelBooking-amico.png' %}" class="js-tilt-block">
+                        <button class="btn">
+                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                        </button>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font18 lh-norm marbot40">
+                            Система сама напишет письмо от имени менеджера, сама сменит статус сделки при наступлении того или иного события, сама уведомит вас и поставит задачу, сама подпишет или отпишет клиента от листа рассылки, а также будет каждому клиенту показывать индивидуальную рекламу на разных этапах продажи
+                        </p>
+                        <img style="margin-bottom: 20px;" src="{% static 'img/amocrm/image62.png' %}" alt="">
+                        <img src="{% static 'img/amocrm/image63-2.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-section section-6 greybg">
+            <div class="container">
+                <div class="row info-section__item-two marbot100 f-start">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36">
+                            Все письма в amoCRM
+                        </p>
+                        <img src="{% static 'img/amocrm/image64.png' %}" alt="">
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold lh130 marbot40">
+                            Ведите всю переписку прямо в amoCRM<br>
+                            - пишите письма, создавайте типовые<br>
+                            шаблоны и на их основе отправляйте<br>
+                            письма и планируйте автоматическую <br>
+                            рассылку.
+                        </p>
+                        <p class="font18 lh-norm marbot40">
+                            Подключайте неограниченное количество ящиков: общих,<br>
+                            корпоративных или личных, и ваша переписка отобразится в<br>
+                            amoCRM с учётов прав доступа. При этом на каждое новое письмо от<br>
+                            клиента amoCRM автоматически создаст новую сделку и сохранит<br>
+                            всю историю переписки.
+                        </p>
+                        <button class="btn">
+                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="lapkin-form--wrapper fullscreen-form offset-sm-0">
+                    <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"856978",hash:"134e356ce30bec862eb07ad43466d18e",locale:"ru"})}(window,0,"amo_forms_","params","load");</script><script id="amoforms_script_856978" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1635928406"></script>
+
+                    <!--amocrm-form-6m5pae50j5cqkmyopuamrv57qegwpsj0-->
+                    <!-- <form class="lapkin-form--form" id="amocrm-form-6m5pae50j5cqkmyopuamrv57qegwpsj0">
+                        <input type="hidden" name="sessid" id="sessid_1" value="b9d33c21163b303dc19ed1496bdc6851">
+                        <input type="hidden" name="id" value="amocrm">
+                        <input type="hidden" name="required" value="bmFtZSxwaG9uZQ==">
+                        <input type="hidden" name="url" value="https://lapkinlab.ru/amocrm/">
+                        <div class="lapkin-form--wrapper">
+                            <div class="form-left col-sm-5">
+                                <h2 class="lapkin-form--title">
+                                    Хотите продавать больше?
+                                </h2>
+                            </div>
+                            <div class="form-right col-sm-7">
+                                <div class="lapkin-form--fields">
+                                    <div class="form-field form-field-text">
+                                        <label for="amocrm-form-name"></label>
+                                        <input id="amocrm-form-name" type="text" name="name" placeholder="Ваше имя *" required="">
+                                    </div>
+                                    <div class="form-field form-field-text">
+                                        <label for="amocrm-form-phone"></label>
+                                        <input id="amocrm-form-phone" type="tel" name="phone" placeholder="Телефон *" required="" im-insert="true">
+                                    </div>
+                                    <div class="form-field form-field-text">
+                                        <label for="amocrm-form-site"></label>
+                                        <input id="amocrm-form-site" type="text" name="site" placeholder="Вид бизнеса">
+                                    </div>
+                                </div>
+                                <div class="lapkin-form--actions">
+                                    <div class="form-action col-sm-7">
+                                        <button class="button js-send-form" type="submit">
+                                            Хочу продавать больше
+                                        </button>
+                                    </div>
+                                    <div class="lapkin-form--privacy">
+                                        <p>
+                                            Нажимая на кнопку «Хочу продавать больше», я&nbsp;даю согласие на 
+                                            
+                                            <a class="privacy-policy" href="/privacy-policy/" rel="nofollow">обработку персональных данных</a>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form> -->
+                </div>
+                <div class="row info-section__item-two margin-top-9">
+                    <div class="info-section__text col-lg-4 col-md-12">
+                        <p class="bold-text font36">
+                            Интеграция с сайтом
+                        </p>
+                        <p class="font18"> 
+                            Подключение специальных виджетов избавит вас от необходимости вручную переносить лиды и контакты в систему! Создавайте специальные формы на вашем сайте. После заполнения их клиентом контакт или сделка будут автоматически попадать в amoCRM.
+                        </p>
+                        <button class="btn">
+                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                        </button>
+                    </div>
+                    <div class="info-section__image col-lg-8 col-md-12 ">
+                        <img class="marleft40" src="{% static 'img/amocrm/site-integration.png' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-section section-6">
+            <div class="container">
+                <div class="row info-section__item-two margin-top-9 f-start">
+                    <div class="info-section__text col-lg-4 col-md-12">
+                        <p class="bold-text font36 lh-norm"> 
+                            Интеграция с вашей телефонией
+                        </p>
+                        <p class="font18"> 
+                            amoCRM станет незаменимым помощником в совершении и переадресации звонков. С ее помощью вы сможете "помнить" имена всех ваших клиентов. В программе хранится вся статистика ваших входящих и исходящих звонков. И самое интересное - настройки всего этого не требуют никаких усилий или технических знаний.
+                        </p>
+                        <button class="btn">
+                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                        </button>
+                    </div>
+                    <div class="info-section__image col-lg-8 col-md-12 ">
+                        <img src="{% static 'img/amocrm/Group227.png' %}" class="js-tilt-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-section section-6">
+            <div class="container">
+                <div class="row info-section__item-two f-start">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36 lh-norm">
+                            Задачи и<br>
+                            напоминания
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold padleft30"> 
+                            amoCRM помогает следить за тем, чтобы<br>
+                            по каждой сделке было запланировано<br>
+                            действие.
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two margin-top-9 f-start">
+                    <div class="info-section__image col-lg-5 col-md-12">
+                        <p class="font18 padright40">
+                            Если задачи не поставлены - система сигнализирует об этом. Конечно, нет ничего проще, чем поставить задачу в amoCRM - вы указываете когда, кому и что надо выполнить, а системные напоминания никогда не дадут забыть о поставленной задаче.
+                        </p>
+                        <button class="btn">
+                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                        </button>
+                    </div>
+                    <div class="info-section__text col-lg-7 col-md-12">
+                        <img src="{% static 'img/amocrm/svyazka-ip-telefonii2.png' %}" class="js-tilt-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-section section-6 greybg">
+            <div class="container">
+                <div class="row info-section__item-two f-start">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36 lh-norm"> 
+                            Аналитика
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two f-start">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <img src="{% static 'img/amocrm/Group228.png' %}" class="js-tilt-block"> <div class="col-md-12 jc-center">
+                            <button class="btn">
+                                    <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                                </button>
+                        </div>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold lh130 marbot45"> 
+                            В amoCRM предусмотрены диаграммы распределения всех сделок по статусам воронки продаж, менеджерам или другом удобном для вас разрезе.
+                        </p>
+                        <p class="font18 marbot40">
+                            Вы можете увидеть все значимые данные на<br>одном экране или углубиться в анализ<br>
+                            ситуации по конкретному менеджеру или<br>
+                            сделке.
+                        </p>
+                        <img class="marleft-27" src="{% static 'img/amocrm/svyazka-ip-telefonii3.png' %}">
+                    </div>
+                </div>
+                <div class="row info-section__item-two margin-top-9 f-start">
+                    <div class="info-section__image col-lg-5 col-md-12 ">
+                        <img class="marleft-27" src="{% static 'img/amocrm/Group229.png' %}">
+                    </div>
+                    <div class="info-section__text col-lg-7 col-md-12">
+                        <p class="bold-text font25 martop5"> 
+                            Аналитика по воронке
+                        </p>
+                        <p class="font18">
+                            Аналитика по воронке продаж позволит увидеть на<br>
+                            каких этапах вы теряете клиентов и предоставит<br>
+                            достаточное количество данных, чтобы принять<br>
+                            верные управленческие решения.
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two margin-top-9 f-start">
+                    <div class="info-section__image col-lg-5 col-md-12 ">
+                        <img class="marleft-27" src="{% static 'img/amocrm/svyazka-ip-telefonii5.png' %}">
+                    </div>
+                    <div class="info-section__text col-lg-7 col-md-12">
+                        <p class="bold-text font25 martop5">
+                            Аналитика по сотруднику
+                        </p>
+                        <p class="font18">
+                            Аналитика по каждому сотруднику покажет успехи,<br>
+                            проблемные зоны и загруженность по каждому сотруднику<br>
+                            - во всех деталях.
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two margin-top-9 f-start">
+                    <div class="info-section__image col-lg-5 col-md-12 ">
+                        <img class="marleft-27" src="{% static 'img/amocrm/svyazka-ip-telefonii4.png' %}">
+                    </div>
+                    <div class="info-section__text col-lg-7 col-md-12">
+                        <p class="bold-text font25 martop5"> 
+                            Аналитика по целям
+                        </p>
+                        <p class="font18">
+                            Аналитика по целям позволяет поставить KPI для<br>
+                            сотрудников, отделов и компании в целом и в<br>
+                            реальном времени видеть, кто и как приближает<br>
+                            компанию к ключевым показателям.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-section section-6 marbot-100">
+            <div class="container">
+                <div class="row info-section__item-two marbot40">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36 lh-norm">
+                            API, расширения и виджеты
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold">
+                            Экономьте время ваших специалистов - сделайте работу с amoCRM привычной и комфортной.
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two f-start marbot100">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="font18 lh-norm marbot40">
+                            Ведь в amoCRM есть десятки готовых<br>
+                            интеграций, с помощью которых можно в два<br>
+                            клика создать email-рассылки, интегрировать<br>
+                            систему с телефонией, хранить файлы в<br>
+                            удобном облачном хранилище Dropbox и<br>
+                            многое другое.
+                        </p>
+                        <p class="font18 lh-norm marbot40">
+                            А благодаря открытому API вы можете<br>изменить интерфейс под себя, создать<br>
+                            собственные виджеты, чтобы расширить<br>
+                            возможности amoCRM.
+                        </p>
+                        <button class="btn">
+                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                        </button>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <img class="marleft-27" src="{% static 'img/amocrm/svyazka-ip-telefonii8.png' %}">
+                    </div>
+                </div>
+                <div class="row info-section__item-two marbot40">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36 lh-norm">
+                            Сканер визиток
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold lh-norm"> 
+                            Мобильное приложение amoCRM научилось распознавать визитки.
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two f-start">
+                    <div class="info-section__image col-lg-5 col-md-12">
+                        <img class="minwidth100 z-1" src="{% static 'img/amocrm/Group230.png' %}">
+                    </div>
+                    <div class="info-section__text col-lg-7 col-md-12">
+                        <p class="font18 lh-norm marbot40">
+                            Все, что нужно - скачать приложение amoCRM, запустить его, взять<br>
+                            визитку и нажать на кнопку "распознавание". amoCRM создаст<br>
+                            карточку сделки, внесет все контактные данные, данные о компании<br>
+                            и сохранит запись в базе.
+                        </p>
+                        <p class="font18 lh-norm marbot40">
+                            Вам потребуется буквально несколько минут, чтобы оцифровать<br>
+                            стопку новых визиток после очередной конференции. но самое<br>
+                            главное, вы не потеряете ни одного потенциального клиента<br>
+                            - самого ценного клиента, с которым вы пообщались лично, пожали<br>
+                            друг другу руки, обменялись контактами. Визитки это здорово, а с<br>
+                            amoCRM еще и удобно!
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-section section-6 greybg martop0 z-2 padbot0">
+            <div class="container">
+                <div class="row info-section__item-two f-start">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36 lh-norm marbot45">
+                            Iphone и Android
+                        </p>
+                        <p class="font30 font-bold lh-norm marbot45">
+                            С мобильными приложениями amoCRM можно работать где и когда вам удобно.
+                        </p>
+                        <p class="font18 lh-norm marbot40">
+                            Приложения работают онлайн и позволяют просматривать актуальные данные без задержек. Но самое главное - теперь все функции веб-версии доступны в вашем телефоне!
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12 jc-fend">
+                        <img src="{% static 'img/amocrm/Group231.png' %}" class="js-tilt-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-section section-6">
+            <div class="container">
+                <div class="row info-section__item-two marbot40 f-start">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36 lh-norm">
+                            Кастомизируемая<br>
+                            карточка сделки
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold"> 
+                            amoCRM сама умеет создавать портрет вашего покупателя на основе полной статистики по каждому клиенту и всех обращений в компанию.
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two f-start marbot100">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="font18 lh-norm marbot40">
+                            В карточке по-прежнему фиксируется любое<br>
+                            изменение, а обновленная лента событий<br>
+                            тесно интегрирована с внутренними и<br>
+                            внешними сообщениями. Но самое главное -<br>
+                            карточку можно дорабатывать, добавлять<br>
+                            свои блоки и подстраивать под себя.
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <img class="marleft-27" src="{% static 'img/amocrm/svyazka-ip-telefonii9.png' %}">
+                    </div>
+                </div>
+                
+                    <div class="lapkin-form--wrapper fullscreen-form offset-sm-0">
+                        <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"857101",hash:"1d01958ac09403c900837093a0be60a1",locale:"ru"})}(window,0,"amo_forms_","params","load");</script><script id="amoforms_script_857101" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1635939061"></script>
+
+                        <!--amocrm-form-4uvpxmuolzk822njjqqmgjfete8v6jgf-->
+                        <!-- <form class="lapkin-form--form" id="amocrm-form-4uvpxmuolzk822njjqqmgjfete8v6jgf">
+                            <input type="hidden" name="sessid" id="sessid_2" value="b9d33c21163b303dc19ed1496bdc6851">
+                            <input type="hidden" name="id" value="amocrm">
+                            <input type="hidden" name="required" value="bmFtZSxwaG9uZQ==">
+                            <input type="hidden" name="url" value="https://lapkinlab.ru/amocrm/">
+                            <div class="lapkin-form--wrapper">
+                                <div class="form-left col-sm-5">
+                                    <h2 class="lapkin-form--title">
+                                        Хотите продавать больше?
+                                    </h2>
+                                </div>
+                                <div class="form-right col-sm-7">
+                                    <div class="lapkin-form--fields">
+                                        <div class="form-field form-field-text">
+                                            <label for="amocrm-form-name"></label>
+                                            <input id="amocrm-form-name" type="text" name="name" placeholder="Ваше имя *" required="">
+                                        </div>
+                                        <div class="form-field form-field-text">
+                                            <label for="amocrm-form-phone"></label>
+                                            <input id="amocrm-form-phone" type="tel" name="phone" placeholder="Телефон *" required="" im-insert="true">
+                                        </div>
+                                        <div class="form-field form-field-text">
+                                            <label for="amocrm-form-site"></label>
+                                            <input id="amocrm-form-site" type="text" name="site" placeholder="Вид бизнеса">
+                                        </div>
+                                    </div>
+                                    <div class="lapkin-form--actions">
+                                        <div class="form-action col-sm-7">
+                                            <button class="button js-send-form" type="submit">
+                                                Хочу продавать больше
+                                            </button>
+                                        </div>
+                                        <div class="lapkin-form--privacy">
+                                            <p>
+                                                Нажимая на кнопку «Хочу продавать больше», я&nbsp;даю согласие на 
+                                                
+                                                <a class="privacy-policy" href="/privacy-policy/" rel="nofollow">обработку персональных данных</a>
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form> -->
+                    </div>
+                
+            </div>
+        </div>
+        <div class="info-section section-6 greybg">
+            <div class="container">
+                <div class="row info-section__item-two f-start marbot100">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36 lh-norm">
+                            Платформа amoCRM
+                        </p>
+                        <img src="{% static 'img/amocrm/91.png' %}" class="js-tilt-block">
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold marbot40"> 
+                            Больше не нужны дополнительные<br>
+                            приложения для общения с коллегами -<br>
+                            теперь вы можете общаться прямо в<br>
+                            amoCRM!
+                        </p>
+                        <p class="font18 lh-norm marbot40">
+                            И самое главное, всё это интегрировано с карточкой клиента. Ваш<br>
+                            коллега сразу же получит уведомление на телефон и внутри<br>
+                            аккаунта, перейдёт в карточку и сможет ответить.
+                        </p>
+                        <p class="font18 lh-norm">
+                            А если такой возможности нет, то в центре нотификаций можно<br>
+                            прочесть все уведомления из разных источников. И да, все отлично<br>
+                            работает на iPhone и Android.
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two f-start marbot100">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36 lh-norm">
+                            Бесплатные<br>
+                            пользователи
+                        </p>
+                        <img class="marleft40" src="{% static 'img/amocrm/81.png' %}">
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold marbot40">
+                            Теперь вы сможете переписываться с<br>
+                            любым человеком прямо в amoCRM и<br>
+                            не важно есть у него доступ или нет.
+                        </p>
+                        <p class="font18 lh-norm marbot40">
+                            Указываете любой email, и ваш коллега получает приглашение,<br>
+                            переходит в карточку и может общаться с вами - все просто и<br>
+                            удобно.
+                        </p>
+                        <p class="font18 lh-norm">
+                            Самое интересное: всё это абсолютно бесплатно.
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two f-start">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36 lh-norm">
+                            Уникальный SalesBot
+                        </p>
+                        <img src="{% static 'img/amocrm/71.png' %}">
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold marbot40"> 
+                            Больше не нужны дополнительные<br>
+                            приложения для общения с коллегами -<br>
+                            теперь вы можете общаться прямо<br>
+                            в amoCRM!
+                        </p>
+                        <p class="font18 lh-norm marbot40">
+                            Робот продавец вместо вашего менеджера начнет дискуссию с<br>
+                            клиентом, сам напишет ненавязчивое письмо в нужный момент, не<br>
+                            забудет о вашей задаче и поможет не потерять клиента.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-section section-6">
+            <div class="container">
+                <div class="row info-section__item-two f-start">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36 lh-norm">
+                            Покупатели и воронка<br>
+                            покупателей
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold"> 
+                            Воронка покупателей создана для<br>
+                            работы с постоянными клиентами.
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two f-start marbot100">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="font18 lh-norm marbot40">
+                            Теперь вы можете видеть покупателей, которым пора<br>
+                            вернуться и купить, и тех, кто припозднился. Вы<br>
+                            можете в нужный момент напомнить клиенту о себе -<br>
+                            позвонить, отправить смс или написать сообщение.<br>
+                            Воронка покупателей идеально подходит бизнесам по<br>
+                            подписке.
+                        </p>
+                        <button class="btn">
+                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                        </button>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <img src="{% static 'img/amocrm/101.png' %}" class="js-tilt-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-section section-6 greybg">
+            <div class="container">
+                <div class="row info-section__item-two f-start">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="bold-text font36 lh-norm">
+                            Digital воронка<br>
+                            покупателей
+                        </p>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <p class="font30 font-bold">
+                            amoCRM сама возвращает клиентов и<br>
+                            доводит их до повторной покупки.
+                        </p>
+                    </div>
+                </div>
+                <div class="row info-section__item-two f-start">
+                    <div class="info-section__text col-lg-5 col-md-12">
+                        <p class="font18 lh-norm marbot40">
+                            Система сделает всё, чтобы случайный посетитель<br>
+                            стал постоянным покупателем, сама проследить когда<br>
+                            покупателю пришло время совершить покупку, сама<br>
+                            напишет письмо или другое сообщение от имени<br>
+                            менеджера, покажет персональную рекламу в нужный<br>
+                            момент, поставит задачу связаться с клиентом и<br>
+                            многое другое.
+                        </p>
+                        <button class="btn">
+                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwcxzm'>Попробовать решение</a>
+                        </button>
+                    </div>
+                    <div class="info-section__image col-lg-7 col-md-12">
+                        <img src="{% static 'img/amocrm/111.png' %}" class="js-tilt-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--ЭКРАН С ТАРИФАМИ-->
+        <div class="info-section section-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                        <div class="title-base marbot45">
+                            Цены и тарифы
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    {% for post in amoCRMpage_amo_price_list %}
+                    <div class="col-xl-4 col-lg-6 site-price__wrapper fee">
+                        
+                        <div class="site-price">
+                            <div class="site-price__header"> 
+                                “{{ post.amo_priceTitle }}”
+                            </div>
+                            <div class="site-price__content">
+                                <div class="site-price__description">
+                                    <p class="font-bold">
+                                        {{ post.amo_priceDescription }}
+                                    </p>
+                                    <ul class="red-marked-list marleft20">
+                                        <li class="red-marked-list-item font-norm">
+                                            {{ post.amo_priceText1 }}
+                                        </li>
+                                        <li class="red-marked-list-item font-norm">
+                                            {{ post.amo_priceText2 }}
+                                        </li>
+                                        <li class="red-marked-list-item font-norm">
+                                            {{ post.amo_priceText3 }}
+                                        </li>
+                                        <li class="red-marked-list-item font-norm">
+                                            {{ post.amo_priceText4 }}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="site-price__info">
+                                    <div class="site-price__info-item">
+                                        <img src="{% static 'img/amocrm/rub.png' %}">
+                                        <b> {{ post.amo_pricePrice }} ₽ </b>
+                                    </div>
+                                    <div class="site-price__action">
+                                        <button class="btn">
+                                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwzrrx'>Заказать</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="font16 t-center martop30">
+                                Цена за пользователя в месяц
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="col-xl-4 col-lg-6 site-price__wrapper fee">
+                        <div class="site-price">
+                            <div class="site-price__header text-red">
+                                “Расширенный”
+                            </div>
+                            <div class="site-price__content">
+                                <div class="site-price__description">
+                                    <p class="font-bold">
+                                        Для тех, кто хочет оптимизировать конверсию
+                                    </p>
+                                    <ul class="red-marked-list marleft20">
+                                        <li class="red-marked-list-item font-norm">
+                                            Бизнес процессы с автоматическим созданием задач
+                                        </li>
+                                        <li class="red-marked-list-item font-norm">
+                                            Обязательность заполнения полей
+                                        </li>
+                                        <li class="red-marked-list-item font-norm">
+                                            Kpi и план продаж для менеджеров
+                                        </li>
+                                        <li class="red-marked-list-item font-norm">
+                                            Возможность доработки рабочего стола
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="site-price__info">
+                                    <div class="site-price__info-item">
+                                        <img src="{% static 'img/amocrm/rub.png' %}">
+                                        <b> 999 ₽ </b>
+                                    </div>
+                                    <div class="site-price__action">
+                                        <button class="btn js-open-modal" data-action="openModal" data-modal="crm-optimum" data-tarif="crm_optimum">
+                                            Заказать
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="font16 t-center martop30">
+                                Цена за пользователя в месяц
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 site-price__wrapper fee">
+                        <div class="site-price">
+                            <div class="site-price__header">
+                                “Профессиональный”
+                            </div>
+                            <div class="site-price__content">
+                                <div class="site-price__description">
+                                    <p class="font-bold"> 
+                                        Для тех, кто занимается обработкой большого количества лидов
+                                    </p>
+                                    <ul class="red-marked-list marleft20">
+                                        <li class="red-marked-list-item font-norm">
+                                            Скоринг лидов
+                                        </li>
+                                        <li class="red-marked-list-item font-norm">
+                                            Периодический данных с отправкой архива на почту
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="site-price__info">
+                                    <div class="site-price__info-item">
+                                        <img src="{% static 'img/amocrm/rub.png' %}">
+                                        <b> 1 499 ₽ </b>
+                                    </div>
+                                    <div class="site-price__action">
+                                        <button class="btn js-open-modal" data-action="openModal" data-modal="crm-advanced" data-tarif="crm_advanced">
+                                            Заказать
+                                        </button>
+                                    </div> 
+                                </div>
+                            </div>
+                            <p class="font16 t-center martop30">
+                                Цена за пользователя в месяц
+                            </p>
+                        </div>
+                    </div> -->
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!--/ЭКРАН С ТАРИФАМИ-->
+        <!--ЭКРАН С ПАКЕТНЫМИ ТАРИФАМИ-->
+        <div class="info-section section-6">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="info-section__text col-lg-4 col-md-12">
+                        <img src="{% static 'img/amocrm/Uploading-amico.png' %}" class="js-tilt-block">
+                    </div>
+                    <div class="info-section__image col-lg-8 col-md-12">
+                        {% for post in amoCRMpage_amo_combo_price_list %}
+                        <div class="site-price col-lg-12 horizont">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="site-price__header">
+                                    {{ post.amo_combo_priceTitle }}
+                                </div>
+                                <div class="site-price__info">
+                                    <div class="site-price__info-item">
+                                        <img src="{% static 'img/amocrm/rub.png' %}"> 
+                                        <b> {{ post.amo_combo_pricePrice }} ₽ </b>
+                                    </div>
+                                    <div class="site-price__action">
+                                        <button class="btn">
+                                            <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwzrwv'>Заказать</a>
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="font16 t-center martop30 marbot0">
+                                    Цена за 2х пользователей в месяц
+                                </p>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="site-price__content">
+                                    <div class="site-price__description">
+                                        <p class="font-bold">
+                                            {{ post.amo_combo_priceDescription }}
+                                        </p>
+                                        <ul class="red-marked-list marleft20">
+                                            <li class="red-marked-list-item font-norm">
+                                                {{ post.amo_combo_priceText1 }}
+                                            </li>
+                                            <li class="red-marked-list-item font-norm">
+                                                {{ post.amo_combo_priceText2 }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="site-price col-lg-12 horizont">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="site-price__header">
+                                    Пакет “СтартАп”
+                                </div>
+                                <div class="site-price__info">
+                                    <div class="site-price__info-item"> 
+                                        <img src="{% static 'img/amocrm/rub.png' %}"> 
+                                        <b> 14 999 ₽ </b>
+                                    </div>
+                                    <div class="site-price__action">
+                                        <button class="btn js-open-modal" data-action="openModal" data-modal="crm-startup" data-tarif="crm_startup">
+                                            Заказать
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p class="font16 t-center martop30 marbot0">
+                                        Цена за 5ть пользователей в месяц
+                                    </p>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="site-price__content">
+                                        <div class="site-price__description">
+                                            <p class="font-bold">
+                                                Для тех, кто только открыл свой бизнес и начинает привлекать своих первых клиентов
+                                            </p>
+                                            <ul class="red-marked-list marleft20">
+                                                <li class="red-marked-list-item font-norm">
+                                                    Решение для двух пользователей
+                                                </li>
+                                                <li class="red-marked-list-item font-norm">
+                                                    Функционал базового плана по меньшей цене
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        {% endfor %}
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!--/ЭКРАН С ПАКЕТНЫМИ ТАРИФАМИ-->
+        <!--ЭКРАН С ТАРИФАМИ ВНЕДРЕНИЯ AMOCRM-->
+        <div class="bitrix24-rates-sections">
+            <div class="bitrix24-rates-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 section-heading">
+                            <div class="title-base">
+                                Услуги по внедрению amoCRM<br>
+                                для вашего бизнеса
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!--amoSTART-->
+                        <div class="col-xl-6 col-lg-6 site-price__wrapper fee">
+                            {% for post in amoCRMpage_amo_Implementation_price_First_list %}
+                            <div class="site-price">
+                                <div class="site-price__header"> {{ post.amo_Implementation_priceTitle }} </div>
+                                <div class="site-price__content">
+                                    <div class="site-price__description">
+                                        <ul class="red-marked-list marleft40">
+                                            <li class="red-marked-list-item font-bold">
+                                                Базовые настройки:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText1 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText2 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText3 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText4 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText5 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText6 }}
+                                                </li>
+                                            </li>
+                                            <li class="red-marked-list-item font-bold">
+                                                Коммуникации и прием заявок:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText7 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText8 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText9 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText10 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText11 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText12 }}
+                                                </li>
+                                            </li>
+                                            <li class="red-marked-list-item font-bold">
+                                                Автоматизация:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText13 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText14 }}
+                                                </li>
+                                            </li>
+                                            <li class="red-marked-list-item font-bold">
+                                                Дополнительно:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText15 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText16 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText17 }}
+                                                </li>
+                                            </li>
+                                            <!-- <li class="red-marked-list-item font-norm">
+                                                Digital — маркетинг (автоматическая интеграция рекламы в соц.сетях (Facebook, Вконтакте) с воронкой продаж amoCRM
+                                            </li>
+                                            <li class="red-marked-list-item font-norm">
+                                                Создание групп пользователей, настройка прав, разграничение видимости клиентской базы)
+                                            </li>
+                                            <li class="red-marked-list-item font-norm">
+                                                Настройка аккаунта в amoCRM под специфику Вашего бизнеса (персонификация полей, фильтры, дополнительные обозначения)
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                    <div class="site-price__info">
+                                        <div class="site-price__info-item f-col">
+                                            <p class="font-bold font16 lh-norm">
+                                                Стоимость: от {{ post.amo_Implementation_pricePrice }} ₽
+                                            </p>
+                                            
+                                            <p class="font16 lh-norm">
+                                                Срок выполнения: от {{ post.amo_Implementation_priceDays }} рабочих дней
+                                            </p> 
+                                        </div>
+                                        <div class="site-price__action">
+                                            <button class="btn">
+                                                <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwzrwm'>Заказать</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!--/amoSTART-->
+                        <!--amoSMART-->
+                        <div class="col-xl-6 col-lg-6 site-price__wrapper fee">
+                            {% for post in amoCRMpage_amo_Implementation_price_Second_list %}
+                            <div class="site-price">
+                                <div class="site-price__header"> 
+                                    {{  post.amo_Implementation_priceTitle }} 
+                                </div> 
+                                <div class="site-price__content">
+                                    <div class="site-price__description"> 
+                                        <ul class="red-marked-list marleft40">
+                                            <li class="red-marked-list-item font-bold">
+                                                Базовые настройки:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText1 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText2 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText3 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText4 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText5 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText6 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText7 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText8 }}
+                                                </li>
+                                            </li>
+                                            <li class="red-marked-list-item font-bold">
+                                                Коммуникации и прием заявок:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText9 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText10 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText11 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText12 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText13 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText14 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText15 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText16 }}
+                                                </li>
+                                            </li>
+                                            <li class="red-marked-list-item font-bold">
+                                                Автоматизация:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText17 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText18 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText19 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText20 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText21 }}
+                                                </li>
+                                            </li>
+                                            <li class="red-marked-list-item font-bold">
+                                                Рекламные каналы и аудитории:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText22 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText23 }}
+                                                </li>
+                                            </li>
+                                            <li class="red-marked-list-item font-bold">
+                                                Дополнительно:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText24 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText25 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText26 }}
+                                                </li>
+                                            </li>
+                                            <!-- <li class="red-marked-list-item font-norm">
+                                                Digital — маркетинг (автоматическая интеграция рекламы в соц.сетях (Facebook, Вконтакте) с воронкой продаж amoCRM
+                                            </li>
+                                            <li class="red-marked-list-item font-norm">
+                                                Создание групп пользователей, настройка прав, разграничение видимости клиентской базы)
+                                            </li>
+                                            <li class="red-marked-list-item font-norm">
+                                                Настройка аккаунта в amoCRM под специфику Вашего бизнеса (персонификация полей, фильтры, дополнительные обозначения)
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                    <div class="site-price__info">
+                                        <div class="site-price__info-item f-col">
+                                            <p class="font-bold font16 lh-norm">
+                                                Стоимость: от {{ post.amo_Implementation_pricePrice }} ₽
+                                            </p>
+                                            
+                                            <p class="font16 lh-norm">
+                                                Срок выполнения: от {{ post.amo_Implementation_priceDays }} рабочих дней
+                                            </p> 
+                                        </div>
+                                        <div class="site-price__action">
+                                            <button class="btn">
+                                                <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwzrcz'>Заказать</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!--/amoSMART-->
+                        <!--amoPRO-->
+                        <div class="col-xl-6 col-lg-6 site-price__wrapper fee">
+                            {% for post in amoCRMpage_amo_Implementation_price_Third_list %}
+                            <div class="site-price">
+                                <div class="site-price__header">
+                                    {{ post.amo_Implementation_priceTitle }}
+                                </div>
+                                <div class="site-price__content">
+                                    <div class="site-price__description">
+                                        <ul class="red-marked-list marleft40">
+                                            <li class="red-marked-list-item font-bold">
+                                                Базовые настройки:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText1 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText2 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText3 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText4 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText5 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText6 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText7 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText8 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText9 }}
+                                                </li>
+
+                                            </li>
+                                            <li class="red-marked-list-item font-bold">
+                                                Коммуникации и прием заявок:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText10 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText11 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText12 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText13 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText14 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText15 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText16 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText17 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText18 }}
+                                                </li>
+                                            </li>
+                                            <li class="red-marked-list-item font-bold">
+                                                Автоматизация:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText19 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText20 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText21 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText22 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText23 }}
+                                                </li>
+                                            </li>
+                                            <li class="red-marked-list-item font-bold">
+                                                Рекламные каналы и аудитории:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText24 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText25 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText26 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText27 }}
+                                                </li>
+                                            </li>
+                                            <li class="red-marked-list-item font-bold">
+                                                Дополнительно:
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText28 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText29 }}
+                                                </li>
+                                                <li class="red-marked-list-item font-norm ml-5">
+                                                    {{ post.amo_Implementation_priceText30 }}
+                                                </li>
+                                            </li>
+                                            <!-- <li class="red-marked-list-item font-norm">
+                                                Digital — маркетинг (автоматическая интеграция рекламы в соц.сетях (Facebook, Вконтакте) с воронкой продаж amoCRM
+                                            </li>
+                                            <li class="red-marked-list-item font-norm">
+                                                Создание групп пользователей, настройка прав, разграничение видимости клиентской базы)
+                                            </li>
+                                            <li class="red-marked-list-item font-norm">
+                                                Настройка аккаунта в amoCRM под специфику Вашего бизнеса (персонификация полей, фильтры, дополнительные обозначения)
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                    <div class="site-price__info">
+                                        <div class="site-price__info-item f-col">
+                                            <p class="font-bold font16 lh-norm">
+                                                Стоимость: от {{ post.amo_Implementation_pricePrice }} ₽
+                                            </p>
+                                            
+                                            <p class="font16 lh-norm">
+                                                Срок выполнения: от {{ post.amo_Implementation_priceDays }} рабочих дней
+                                            </p> 
+                                        </div>
+                                        <div class="site-price__action">
+                                            <button class="btn">
+                                                <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwzrzl'>Заказать</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!--/amoPRO-->
+                        <!--amoCRM КОНСАЛТИНГ-->
+                        <div class="col-xl-6 col-lg-6 site-price__wrapper fee">
+                            {% for post in amoCRMpage_amo_Implementation_price_Fourth_list %}
+                            <div class="site-price">
+                                <div class="site-price__header">
+                                    {{ post.amo_Implementation_priceTitle }}
+                                </div>
+                                <div class="site-price__content"> 
+                                    <div class="site-price__description"> 
+                                        <ul class="red-marked-list marleft40">
+                                            <li class="red-marked-list-item font-norm">
+                                                {{ post.amo_Implementation_priceText1 }}
+                                            </li>
+                                            <li class="red-marked-list-item font-norm">
+                                                {{ post.amo_Implementation_priceText2 }}
+                                            </li>
+                                            <li class="red-marked-list-item font-norm">
+                                                {{ post.amo_Implementation_priceText3 }}
+                                            </li>
+                                            <li class="red-marked-list-item font-norm">
+                                                {{ post.amo_Implementation_priceText4 }}
+                                            </li>
+                                            <li class="red-marked-list-item font-norm">
+                                                {{ post.amo_Implementation_priceText5 }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="site-price__info">
+                                        <div class="site-price__info-item f-col">
+                                            <p class="font-bold font16 lh-norm">
+                                                Стоимость:
+                                            </p>
+                                            <p class="font16 lh-norm">
+                                                зависит от объема работ и рассчитывается индивидуально.
+                                            </p>
+                                        </div>
+                                        <div class="site-price__action">
+                                            <button class="btn">
+                                                <a class='text-white' style='text-decoration: none; font-family: "Proxima Nova", serif; font-weight:600;' href='https://forms.amocrm.ru/mwzrmw'>Заказать</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!--/amoCRM КОНСАЛТИНГ-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ЭКРАН С ТАРИФАМИ ВНЕДРЕНИЯ AMOCRM-->
+        <!--ФОРМА ОСТАЛИСЬ ВОПРОСЫ?-->
+        <div class="section--lapkin-form lapkin-form">
+            <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"857188",hash:"9c87c4cae09b16f0d24f64064c65b686",locale:"ru"})}(window,0,"amo_forms_","params","load");</script><script id="amoforms_script_857188" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1635943970"></script>
+
+            <div class="container">
+                <div class="row">
+                    <div class="lapkin-form--wrapper col-xl-10 offset-xl-1 col-sm-12 offset-sm-0">
+
+                        <!--contact-form-xffdh1dndlpzrffhxe1itlskrpf8m0gf-->
+                        <!-- <form class="lapkin-form--form" id="contact-form-xffdh1dndlpzrffhxe1itlskrpf8m0gf">
+                            <input type="hidden" name="sessid" id="sessid_3" value="b9d33c21163b303dc19ed1496bdc6851">
+                            <input type="hidden" name="id" value="contact">
+                            <input type="hidden" name="required" value="bmFtZSxwaG9uZQ==">
+                            <input type="hidden" name="url" value="https://lapkinlab.ru/amocrm/"> <h2 class="lapkin-form--title text-center">
+                                Остались вопросы? Напишите нам!
+                            </h2>
+                            <div class="lapkin-form--fields">
+                                <div class="form-field form-field-text">
+                                    <label for="contact-form-name"></label>
+                                    <input id="contact-form-name" type="text" name="name" placeholder="Ваше имя *" required="">
+                                </div>
+                                <div class="form-field form-field-text">
+                                    <label for="contact-form-phone"></label>
+                                    <input id="contact-form-phone" type="tel" name="phone" placeholder="Телефон *" required="" im-insert="true">
+                                </div>
+                                <div class="form-field form-field-text">
+                                    <label for="contact-form-email"></label>
+                                    <input id="contact-form-email" type="text" name="email" placeholder="Почта">
+                                </div>
+                                <div class="form-field form-field-textarea">
+                                    <label for="contact-form-message"></label>
+                                    <textarea id="contact-form-message" name="message" placeholder="Напишите ваш вопрос для наших специалистов"></textarea>
+                                </div>
+                            </div>
+                            <div class="lapkin-form--privacy">
+                                <p>
+                                    Нажимая на кнопку «Отправить», я&nbsp;даю согласие на 
+                                    
+                                    <a class="privacy-policy" href="/privacy-policy/" rel="nofollow">обработку персональных данных</a>
+                                    
+                                </p>
+                            </div>
+                            <div class="lapkin-form--actions">
+                                <div class="form-action">
+                                    <button class="button js-send-form" type="submit" data-metrika-target="">
+                                        Отправить
+                                    </button>
+                                </div>
+                            </div>
+                        </form> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!--/main-->
