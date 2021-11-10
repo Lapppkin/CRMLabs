@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-import dj-database-url
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -96,9 +96,6 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
-db_from_env = dj-database-url.config()
-DATABASE['default'].update(db_from_env)
 
 
 # Password validation
