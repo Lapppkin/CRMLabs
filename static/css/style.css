@@ -10654,7 +10654,7 @@ body.mobile-menu-open {
     pointer-events: none
 }
 
-.form-link {
+.forma-link {
     text-decoration: none; 
     font-family: "Proxima Nova", serif; 
     font-weight:600;
@@ -21232,7 +21232,8 @@ h2.title {
 .site-price__action {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    margin-left: 20px;
 }
 
 .site-price__action .btn {
@@ -26376,7 +26377,7 @@ body.compensate-for-scrollbar {
 }
 
 .crm .fee .site-price {
-    min-height: 710px;
+    min-height: 850px;
 }
 
 .crm .bitrix24-rates-section .btn {
@@ -26983,7 +26984,7 @@ body.compensate-for-scrollbar {
     }
 
     .amocrm-page .fee .site-price {
-        min-height: 530px;
+        min-height: 630px;
     }
 
     .amocrm-page .site-price.horizont {
@@ -27001,9 +27002,4 @@ body.compensate-for-scrollbar {
         flex-direction: column;
     }
 
-}
-.forma-link {
-    text-decoration: none; 
-    font-family: "Proxima Nova", serif; 
-    font-weight:600;
 }
