@@ -88,7 +88,7 @@ DATABASES = {
         # 'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'crmdb',
-        'USER': 'postgres',
+        'USER': 'admincrm',
         # 'PASSWORD': '1JZHk8N',
         'PASSWORD': 'z8xs&1JZHk8N',
         # 'HOST': '127.0.0.1:8000',
