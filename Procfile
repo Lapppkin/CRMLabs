@@ -1,1 +1,0 @@
-web: gunicorn CrmLabs.wsgi --log-file - 
