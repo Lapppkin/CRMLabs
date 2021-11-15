@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 # from . import views
+from .settings import DEBUG
 
 
 urlpatterns = [
@@ -29,11 +30,6 @@ urlpatterns = [
     path('tackflow/', include('pages.urls')),
     path('contacts/', include('pages.urls')),
     path('privacy-policy/', include('pages.urls')),
-    # path('test/', views.test_page),
-    # path('', views.main_page),
-    # path('bitrix24/', views.bitrix24_page),
-    # path('crm-dlya-oteley/', views.crm_dlya_oteley_page),
-    # path('tackflow/', views.tackflow_page),
-    # path('contacts/', views.contacts_page),
-    # path('privacy-policy/', views.privacy_policy_page),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+if DEBUG:
+    urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
